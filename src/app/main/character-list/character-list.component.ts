@@ -11,14 +11,16 @@ import { CharacterService } from './../../share/service/character-service/charac
 export class CharacterListComponent implements OnInit {
 
   characters: Character[];
-  name: String = 'Spider';
+  name: String = 'Spider-Man';
 
   constructor(private characterService: CharacterService) { }
 
   ngOnInit() {
     this.characterService
-      .getAll(name)
+      .getAll(this.name)
       .subscribe(res => this.characters = res.results);
+
+      console.log('characters', this.characters);
   }
 
 }

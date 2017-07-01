@@ -1,7 +1,6 @@
 import { AppareanceComics, AppareanceEvents, AppareanceSeries, AppareanceStories } from './Appearance';
 import { Urls} from './Urls';
 
-
 export class Character {
     id: number;
     name: string;
