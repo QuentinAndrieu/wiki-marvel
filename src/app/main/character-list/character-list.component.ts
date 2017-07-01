@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Characters } from './../../share/models/characters';
+import { Character } from './../../share/models/character';
 import { CharacterService } from './../../share/service/character-service/character.service';
 
 @Component({
@@ -9,14 +10,15 @@ import { CharacterService } from './../../share/service/character-service/charac
 })
 export class CharacterListComponent implements OnInit {
 
-  characters: Characters;
+  characters: Character[];
+  name: String = 'Spider';
 
   constructor(private characterService: CharacterService) { }
 
   ngOnInit() {
     this.characterService
-      .get()
-      .subscribe(res => this.characters = res);
+      .getAll(name)
+      .subscribe(res => this.characters = res.results);
   }
 
 }
