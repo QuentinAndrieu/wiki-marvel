@@ -1,6 +1,5 @@
 <div class="row">
-  {{characters}}
   <div *ngFor="let character of characters" class="col s3">
-    <app-character></app-character>
+    <app-character [character]="character"></app-character>
   </div>
 </div>

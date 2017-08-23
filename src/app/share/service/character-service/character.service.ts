@@ -15,7 +15,6 @@ export class CharacterService {
 
   private characters = Characters;
 
-
   constructor(private http: Http) {
 
   }
@@ -24,7 +23,6 @@ export class CharacterService {
   getAll(name: String): Observable<Characters> {
     const ts = Date.now().toString();
     const hash: string = Md5.hashStr(ts + this.privatekey + this.apikey).toString();
-    console.log('hash', hash);
 
     const characters = this.http
       .get(`${this.baseUrl}/characters?name=${name}&apikey=${this.apikey}&ts=${ts}&hash=${hash}`)

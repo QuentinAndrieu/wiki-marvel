@@ -1,4 +1,4 @@
-import {Character} from './Character';
+import { Character } from './Character';
 
 export class Characters {
     code: number;
@@ -12,7 +12,7 @@ export class Characters {
         limit: number;
         total: number;
         count: number;
+        results: Character[];
     }
-    results: Character[];
 }
 
