@@ -9,7 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CharacterComponent implements OnInit {
 
   @Input() character: Character;
-  
+
   constructor() { }
 
   ngOnInit() {

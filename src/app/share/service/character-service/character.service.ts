@@ -12,6 +12,8 @@ export class CharacterService {
   private baseUrl = Config.BASEURL;
   private apikey = Config.PUBLIC_KEY;
   private privatekey = Config.PRIVATE_KEY;
+  private ts = Date.now().toString();
+  private hash: string = Md5.hashStr(this.ts + this.privatekey + this.apikey).toString();
 
   private characters = Characters;
 
@@ -20,12 +22,19 @@ export class CharacterService {
   }
 
 
-  getAll(name: String): Observable<Characters> {
-    const ts = Date.now().toString();
-    const hash: string = Md5.hashStr(ts + this.privatekey + this.apikey).toString();
+  getByName(name: String): Observable<Characters> {
 
     const characters = this.http
-      .get(`${this.baseUrl}/characters?name=${name}&apikey=${this.apikey}&ts=${ts}&hash=${hash}`)
+      .get(`${this.baseUrl}/characters?name=${name}&apikey=${this.apikey}&ts=${this.ts}&hash=${this.hash}`)
+      .map(res => res.json());
+
+    return characters;
+  }
+
+  getByNameStartWith(name: String): Observable<Characters> {
+
+    const characters = this.http
+      .get(`${this.baseUrl}/characters?nameStartsWith=${name}&apikey=${this.apikey}&ts=${this.ts}&hash=${this.hash}`)
       .map(res => res.json());
 
     return characters;
