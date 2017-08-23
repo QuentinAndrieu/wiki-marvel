@@ -10,6 +10,7 @@ import { MainComponent } from './main/main.component';
 import { CharacterListComponent } from './main/character-list/character-list.component';
 import { CharacterComponent } from './main/character/character.component';
 import { CharacterService } from './share/service/character-service/character.service';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { CharacterService } from './share/service/character-service/character.se
   imports: [
     BrowserModule,
     MaterializeModule,
-    HttpModule
+    HttpModule,
+    FormsModule
   ],
   providers: [CharacterService],
   bootstrap: [AppComponent]
