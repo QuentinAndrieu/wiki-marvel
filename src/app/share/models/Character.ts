@@ -1,5 +1,7 @@
 import { AppareanceComics, AppareanceEvents, AppareanceSeries, AppareanceStories } from './Appearance';
-import { Urls} from './Urls';
+import { Urls } from './Urls';
+import { GenericResponseAPI, GenericDataAPI } from './GenericResponseAPI';
+
 
 export class Character {
     id: number;
@@ -16,4 +18,13 @@ export class Character {
     stories: AppareanceStories;
     events: AppareanceEvents;
     urls: Urls[];
+}
+
+
+export class CharacterListData extends GenericDataAPI {
+    results: Character[];
+}
+
+export class CharacterListResponseAPI extends GenericResponseAPI {
+    data: CharacterListData;
 }

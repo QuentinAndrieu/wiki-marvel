@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Characters } from './../../share/models/characters';
+import { GenericResponseAPI } from './../../share/models/GenericResponseAPI';
 import { Character } from './../../share/models/character';
 import { CharacterService } from './../../share/service/character-service/character.service';
 
