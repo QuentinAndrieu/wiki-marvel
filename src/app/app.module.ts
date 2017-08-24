@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
 import { MainComponent } from './main/main.component';
 import { CharacterListComponent } from './main/character-list/character-list.component';
-import { CharacterComponent } from './main/character/character.component';
+import { CharacterCardComponent } from './main/character-card/character-card.component';
 import { CharacterService } from './share/service/character-service/character.service';
 import { FormsModule } from '@angular/forms';
 
@@ -18,7 +18,7 @@ import { FormsModule } from '@angular/forms';
     SearchBarComponent,
     MainComponent,
     CharacterListComponent,
-    CharacterComponent
+    CharacterCardComponent
   ],
   imports: [
     BrowserModule,
