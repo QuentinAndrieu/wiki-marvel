@@ -23,4 +23,12 @@ export class CharacterListComponent implements OnInit {
       });
   }
 
+  updateCharactersSearch() {
+    this.characterService
+      .getByNameStartWith(this.name)
+      .subscribe(res => {
+        this.characters = res.data.results;
+      });
+  }
+
 }
