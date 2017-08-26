@@ -11,7 +11,7 @@ import { CharacterService } from './../../share/service/character-service/charac
 export class CharacterListComponent implements OnInit {
 
   characters: Character[];
-  name: String = 'Spider-Man';
+  name: String;
 
   constructor(private characterService: CharacterService) { }
 
