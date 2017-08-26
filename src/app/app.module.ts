@@ -35,7 +35,7 @@ import { CharacterDetailComponent } from './main/character-detail/character-deta
         path: 'characters',
         component: CharacterListComponent
       }, {
-        path: 'character-detail',
+        path: 'character/:id',
         component: CharacterDetailComponent
       }
 

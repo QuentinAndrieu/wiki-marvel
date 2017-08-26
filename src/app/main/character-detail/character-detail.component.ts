@@ -1,6 +1,8 @@
 import { Character } from './../../share/models/Character';
 import { CharacterService } from './../../share/service/character-service/character.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, ParamMap } from '@angular/router';
+import 'rxjs/add/operator/switchMap';
 
 @Component({
   selector: 'app-character-detail',
@@ -9,23 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CharacterDetailComponent implements OnInit {
 
-  id: Number = 1009610;
   character: Character;
 
-  constructor(private characterService: CharacterService) { }
+  constructor(private characterService: CharacterService,
+    private route: ActivatedRoute) { }
 
 
 
   ngOnInit() {
 
-    this.characterService
-      .getById(this.id)
-      .subscribe(res => {
-        console.log('res', res.data.results[0]);
-
-        this.character = res.data.results[0];
-        console.log('this.character', this.character);
-      });
+    this.route.paramMap
+      .switchMap((params: ParamMap) => this.characterService.getById(+params.get('id')))
+      .subscribe(res => this.character = res.data.results[0]);
   }
 
 
