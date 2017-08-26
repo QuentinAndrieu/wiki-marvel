@@ -1,0 +1,12 @@
+.info {
+    background-color: #1c2a4a;
+    color: white;
+    height: 200px;
+    padding: 50px;
+}
+
+.info-text-container {
+    border: 3px solid white;
+    font-size: 20px;
+    padding: 10px;
+}

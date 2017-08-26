@@ -9,9 +9,9 @@
     </div>
 </div>
 
-<div class="col s12 m8">
+<div class="col s12 m8 collapse-character">
     <ul class="collapsible" data-collapsible="accordion">
-        <li *ngIf="character && character.comics">
+        <li *ngIf="character && character.comics && character.comics.items">
             <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Comics</div>
             <div class="collapsible-body">
                 <ul class="collection">
@@ -19,7 +19,7 @@
                 </ul>
             </div>
         </li>
-        <li *ngIf="character && character.events">
+        <li *ngIf="character && character.events && character.events.items">
             <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Events</div>
             <div class="collapsible-body">
                 <ul class="collection">
@@ -27,7 +27,7 @@
                 </ul>
             </div>
         </li>
-        <li *ngIf="character && character.stories">
+        <li *ngIf="character && character.stories && character.stories.items">
             <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Stories</div>
             <div class="collapsible-body">
                 <ul class="collection">
@@ -35,7 +35,7 @@
                 </ul>
             </div>
         </li>
-        <li *ngIf="character && character.series">
+        <li *ngIf="character && character.series && character.series.items">
             <div class="collapsible-header"><i class="material-icons">keyboard_arrow_right</i>Series</div>
             <div class="collapsible-body">
                 <ul class="collection">

@@ -1,0 +1,11 @@
+.header a.page-title {
+    font-size: 36px;
+}
+
+.header {
+    background-color: darkmagenta;
+}
+
+#parallaxHeader {
+    height: 600px;
+}

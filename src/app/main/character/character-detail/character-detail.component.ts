@@ -1,5 +1,5 @@
-import { Character } from './../../share/models/Character';
-import { CharacterService } from './../../share/service/character-service/character.service';
+import { Character } from '../../../share/models/Character';
+import { CharacterService } from '../../../share/service/character-service/character.service';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import 'rxjs/add/operator/switchMap';

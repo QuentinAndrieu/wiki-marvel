@@ -5,22 +5,26 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { SearchBarComponent } from './search-bar/search-bar.component';
+import { HeaderComponent } from './header/header.component';
 import { MainComponent } from './main/main.component';
-import { CharacterListComponent } from './main/character-list/character-list.component';
-import { CharacterCardComponent } from './main/character-card/character-card.component';
+import { CharacterListComponent } from './main/character/character-list/character-list.component';
+import { CharacterCardComponent } from './main/character/character-card/character-card.component';
 import { CharacterService } from './share/service/character-service/character.service';
 import { FormsModule } from '@angular/forms';
-import { CharacterDetailComponent } from './main/character-detail/character-detail.component';
+import { CharacterDetailComponent } from './main/character/character-detail/character-detail.component';
+import { FooterComponent } from './footer/footer.component';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchBarComponent,
+    HeaderComponent,
     MainComponent,
     CharacterListComponent,
     CharacterCardComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    FooterComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

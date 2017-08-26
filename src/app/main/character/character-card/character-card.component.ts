@@ -1,4 +1,4 @@
-import { Character } from './../../share/models/Character';
+import { Character } from '../../../share/models/Character';
 import { Component, OnInit, Input } from '@angular/core';
 import { RouterModule, Routes, ActivatedRoute, Router } from '@angular/router';
 

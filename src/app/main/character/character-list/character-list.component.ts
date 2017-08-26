@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { GenericResponseAPI } from './../../share/models/GenericResponseAPI';
-import { Character } from './../../share/models/character';
-import { CharacterService } from './../../share/service/character-service/character.service';
+import { GenericResponseAPI } from '../../../share/models/GenericResponseAPI';
+import { Character } from '../../../share/models/character';
+import { CharacterService } from '../../../share/service/character-service/character.service';
 
 @Component({
   selector: 'app-character-list',
