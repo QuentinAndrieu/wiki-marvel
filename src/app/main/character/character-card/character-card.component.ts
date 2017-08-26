@@ -10,14 +10,18 @@ import { RouterModule, Routes, ActivatedRoute, Router } from '@angular/router';
 export class CharacterCardComponent implements OnInit {
 
   @Input() character: Character;
+  randomColor: String;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
+
   }
 
   goToDetail(id: number) {
     this.router.navigate(['/character', id]);
   }
+
+
 
 }
