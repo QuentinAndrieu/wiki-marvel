@@ -1,0 +1,38 @@
+<h2 class="center">{{character.name}}</h2>
+<div class="col s12 m4">
+    <div class="col s12">
+        <img class="responsive-img" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="">
+        <p>{{character.description}}</p>
+    </div>
+</div>
+<div class="col s12 m4">
+    <h3>Comics</h3>
+
+    <ul class="collection">
+        <li *ngFor="let comic of character.comics.items" class="collection-item">{{comic.name}}</li>
+    </ul>
+</div>
+
+<div class="col s12 m4">
+    <h3>Events</h3>
+
+    <ul class="collection">
+        <li *ngFor="let event of character.events.items" class="collection-item">{{event.name}}</li>
+    </ul>
+</div>
+
+<div class="col s12 m4 offset-m4">
+    <h3>Stories</h3>
+
+    <ul class="collection">
+        <li *ngFor="let storie of character.stories.items" class="collection-item">{{storie.name}}</li>
+    </ul>
+</div>
+
+<div class="col s12 m4">
+    <h3>Series</h3>
+
+    <ul class="collection">
+        <li *ngFor="let serie of character.series.items" class="collection-item">{{serie.name}}</li>
+    </ul>
+</div>
