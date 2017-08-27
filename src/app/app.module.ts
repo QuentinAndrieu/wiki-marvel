@@ -14,11 +14,12 @@ import { ComicService } from './share/service/comic-service/comic.service';
 import { FormsModule } from '@angular/forms';
 import { CharacterDetailComponent } from './main/character/character-detail/character-detail.component';
 import { FooterComponent } from './footer/footer.component';
-import { InfoComponent } from './info/info.component';
 import { ComicDetailComponent } from './main/comic/comic-detail/comic-detail.component';
 import { ComicListComponent } from './main/comic/comic-list/comic-list.component';
 import { ComicCardComponent } from './main/comic/comic-card/comic-card.component';
 import { LoaderComponent } from './loader/loader.component';
+import { HomeComponent } from './main/home/home.component';
+import { SearchComponent } from './main/search/search.component';
 
 @NgModule({
   declarations: [
@@ -29,11 +30,12 @@ import { LoaderComponent } from './loader/loader.component';
     CharacterCardComponent,
     CharacterDetailComponent,
     FooterComponent,
-    InfoComponent,
     ComicDetailComponent,
     ComicListComponent,
     ComicCardComponent,
-    LoaderComponent
+    LoaderComponent,
+    HomeComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +45,10 @@ import { LoaderComponent } from './loader/loader.component';
     RouterModule.forRoot([
       {
         path: '',
-        component: MainComponent
+        component: HomeComponent
+      }, {
+        path: 'search',
+        component: SearchComponent
       }, {
         path: 'characters',
         component: CharacterListComponent

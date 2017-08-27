@@ -1,23 +1,25 @@
-<div *ngIf="comic">
-  <h2 class="title-comic center">
-    {{comic.title}}</h2>
-  <div class="col s12 m6">
-    <div class="col s12">
-      <app-loader *ngIf="loading"></app-loader>
-      <img [hidden]="loading" (load)="onLoad()" class="responsive-img img-comic-detail" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}"
-        alt="">
-      <p>{{comic.description}}</p>
-      <p><strong>Creators</strong> : <span *ngFor="let creator of comic.creators.items">{{creator.name}} / </span></p>
-      <p><strong>Parution date</strong> : {{comic.dates[0].date | date}}</p>
-    </div>
-  </div>
-
-  <div *ngIf="comic.characters.items[0]" class="comic-detail">
+<div class="row container main-section">
+  <div *ngIf="comic">
+    <h2 class="title-comic center">
+      {{comic.title}}</h2>
     <div class="col s12 m6">
-      <h3>Characters</h3>
+      <div class="col s12">
+        <app-loader *ngIf="loading"></app-loader>
+        <img [hidden]="loading" (load)="onLoad()" class="responsive-img img-comic-detail" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}"
+          alt="">
+        <p>{{comic.description}}</p>
+        <p><strong>Creators</strong> : <span *ngFor="let creator of comic.creators.items">{{creator.name}} / </span></p>
+        <p><strong>Parution date</strong> : {{comic.dates[0].date | date}}</p>
+      </div>
+    </div>
 
-      <div class="collection">
-        <a *ngFor="let character of comic.characters.items" (click)="goToCharacterDetail(character.resourceURI)" class="collection-item">{{character.name}}</a>
+    <div *ngIf="comic.characters.items[0]" class="comic-detail">
+      <div class="col s12 m6">
+        <h3>Characters</h3>
+
+        <div class="collection">
+          <a *ngFor="let character of comic.characters.items" (click)="goToCharacterDetail(character.resourceURI)" class="collection-item">{{character.name}}</a>
+        </div>
       </div>
     </div>
   </div>

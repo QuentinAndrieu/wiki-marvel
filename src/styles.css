@@ -36,3 +36,7 @@ h2 {
 .title-character {
     color: #455a64;
 }
+
+.main-section {
+    min-height: 800px;
+}
