@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class CharacterCardComponent implements OnInit {
 
   @Input() character: Character;
+  loading: Boolean = true;
 
   constructor(private router: Router) { }
 
@@ -20,4 +21,9 @@ export class CharacterCardComponent implements OnInit {
   goToDetail(id: number) {
     this.router.navigate(['/character', id]);
   }
+
+  onLoad() {
+    this.loading = false;
+  }
+
 }

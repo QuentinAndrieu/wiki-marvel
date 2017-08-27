@@ -14,6 +14,7 @@ export class CharacterDetailComponent implements OnInit {
 
   character: Character;
   comics: Comic[];
+  loading: Boolean = true;
 
   constructor(private characterService: CharacterService,
     private route: ActivatedRoute,
@@ -30,6 +31,10 @@ export class CharacterDetailComponent implements OnInit {
   goToComicDetail(resourceURI: string) {
     const id = resourceURI.split('/').pop();
     this.router.navigate(['/comic', id]);
+  }
+
+  onLoad() {
+    this.loading = false;
   }
 
 }

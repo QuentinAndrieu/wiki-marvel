@@ -10,6 +10,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ComicCardComponent implements OnInit {
 
   @Input() comic: Comic;
+  loading: Boolean = true;
 
   constructor(private router: Router) { }
 
@@ -18,6 +19,10 @@ export class ComicCardComponent implements OnInit {
 
   goToDetail(id: number) {
     this.router.navigate(['/comic', id]);
+  }
+
+  onLoad() {
+    this.loading = false;
   }
 
 }

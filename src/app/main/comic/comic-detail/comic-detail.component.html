@@ -3,8 +3,12 @@
     {{comic.title}}</h2>
   <div class="col s12 m6">
     <div class="col s12">
-      <img class="responsive-img img-comic-detail" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="">
+      <app-loader *ngIf="loading"></app-loader>
+      <img [hidden]="loading" (load)="onLoad()" class="responsive-img img-comic-detail" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}"
+        alt="">
       <p>{{comic.description}}</p>
+      <p><strong>Creators</strong> : <span *ngFor="let creator of comic.creators.items">{{creator.name}} / </span></p>
+      <p><strong>Parution date</strong> : {{comic.dates[0].date | date}}</p>
     </div>
   </div>
 

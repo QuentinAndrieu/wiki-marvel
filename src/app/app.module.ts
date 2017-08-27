@@ -18,6 +18,7 @@ import { InfoComponent } from './info/info.component';
 import { ComicDetailComponent } from './main/comic/comic-detail/comic-detail.component';
 import { ComicListComponent } from './main/comic/comic-list/comic-list.component';
 import { ComicCardComponent } from './main/comic/comic-card/comic-card.component';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { ComicCardComponent } from './main/comic/comic-card/comic-card.component
     InfoComponent,
     ComicDetailComponent,
     ComicListComponent,
-    ComicCardComponent
+    ComicCardComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

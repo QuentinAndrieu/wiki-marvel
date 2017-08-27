@@ -3,7 +3,11 @@
         {{character.name}}</h2>
     <div class="col s12 m6">
         <div class="col s12">
-            <img class="responsive-img img-character-detail" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="">
+            <div *ngIf="loading" class="center loader-character-detail">
+                <app-loader></app-loader>
+            </div>
+            <img [hidden]="loading" (load)="onLoad()" class="responsive-img img-character-detail" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}"
+                alt="">
             <p>{{character.description}}</p>
         </div>
     </div>

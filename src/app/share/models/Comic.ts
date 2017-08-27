@@ -23,10 +23,10 @@ export class Comic {
     textObjects: TextObject[];
     resourceURI: string;
     urls: Urls[];
-    series: AppareanceSeries;
     dates: DateAPI[];
     prices: Price[];
     thumbnail: Thumbnail;
+    series: AppareanceSeries;
     creators: AppareanceCreators;
     characters: AppareanceCharacters;
     stories: AppareanceStories;

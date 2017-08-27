@@ -13,6 +13,8 @@ export class ComicDetailComponent implements OnInit {
 
   comic: Comic;
   characters: Character[];
+  loading: Boolean = true;
+
 
   constructor(private comicService: ComicService,
     private route: ActivatedRoute,
@@ -31,4 +33,7 @@ export class ComicDetailComponent implements OnInit {
     this.router.navigate(['/character', id]);
   }
 
+  onLoad() {
+    this.loading = false;
+  }
 }

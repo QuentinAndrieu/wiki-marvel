@@ -1,8 +1,9 @@
 <div class="col s12 m4">
-  <div  class="card black character-card">
-    <div class="card-content white-text">
+  <div class="card black character-card">
+    <div *ngIf="character" class="card-content white-text">
       <div class="card-image">
-        <img (click)="goToDetail(character.id)" class="img-character-card" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}">
+        <app-loader *ngIf="loading"></app-loader>
+        <img [hidden]="loading" (load)="onLoad()" (click)="goToDetail(character.id)" class="img-character-card" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}">
       </div>
       <span class="card-title">{{character.name}}</span>
     </div>

@@ -1,8 +1,9 @@
 <div class="col s12 m4">
-  <div  class="card green comic-card">
+  <div class="card green comic-card">
     <div class="card-content white-text">
       <div class="card-image">
-        <img (click)="goToDetail(comic.id)" class="img-card-comic" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
+        <app-loader *ngIf="loading"></app-loader>
+        <img [hidden]="loading" (load)="onLoad()" (click)="goToDetail(comic.id)" class="img-card-comic" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
       </div>
       <span class="card-title">{{comic.title}}</span>
     </div>
