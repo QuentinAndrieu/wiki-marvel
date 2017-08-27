@@ -21,11 +21,6 @@ body{
     color: white!important;
 }
 
-.collection a.collection-item:hover {
-    background-color: red;
-    color: white!important;
-}
-
 .loader {
     height: 400px;
     padding-top: 200px; 
