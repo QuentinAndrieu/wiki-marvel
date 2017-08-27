@@ -6,6 +6,14 @@ export class AppareanceAbstract {
     returned: number;
 }
 
+export class AppareanceCharacters extends AppareanceAbstract {
+    items: ItemAbstract[];
+}
+
+export class AppareanceCreators extends AppareanceAbstract {
+    items: ItemAbstract[];
+}
+
 export class AppareanceComics extends AppareanceAbstract {
     items: ItemAbstract[];
 }

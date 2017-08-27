@@ -1,16 +1,15 @@
 import { Character } from '../../../share/models/Character';
 import { Component, OnInit, Input } from '@angular/core';
-import { RouterModule, Routes, ActivatedRoute, Router } from '@angular/router';
+import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-character',
+  selector: 'app-character-card',
   templateUrl: './character-card.component.html',
   styleUrls: ['./character-card.component.css']
 })
 export class CharacterCardComponent implements OnInit {
 
   @Input() character: Character;
-  randomColor: String;
 
   constructor(private router: Router) { }
 
@@ -21,7 +20,4 @@ export class CharacterCardComponent implements OnInit {
   goToDetail(id: number) {
     this.router.navigate(['/character', id]);
   }
-
-
-
 }

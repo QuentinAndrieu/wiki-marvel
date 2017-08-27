@@ -1,7 +1,8 @@
+import { Comic } from './../../../share/models/Comic';
 import { Character } from '../../../share/models/Character';
 import { CharacterService } from '../../../share/service/character-service/character.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, ParamMap } from '@angular/router';
+import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import 'rxjs/add/operator/switchMap';
 
 @Component({
@@ -12,10 +13,11 @@ import 'rxjs/add/operator/switchMap';
 export class CharacterDetailComponent implements OnInit {
 
   character: Character;
+  comics: Comic[];
 
   constructor(private characterService: CharacterService,
-    private route: ActivatedRoute) { }
-
+    private route: ActivatedRoute,
+    private router: Router) { }
 
 
   ngOnInit() {
@@ -23,6 +25,14 @@ export class CharacterDetailComponent implements OnInit {
     this.route.paramMap
       .switchMap((params: ParamMap) => this.characterService.getById(+params.get('id')))
       .subscribe(res => this.character = res.data.results[0]);
+
+    this.route.paramMap
+      .switchMap((params: ParamMap) => this.characterService.getComicsByCharacterId(+params.get('id')))
+      .subscribe(res => this.comics = res.data.results);
+  }
+
+  goToComicDetail(id: number) {
+    this.router.navigate(['/comic', id]);
   }
 
 
