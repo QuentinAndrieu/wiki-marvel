@@ -2,3 +2,6 @@
     height: 700px;
     max-height: 700px;
 }
+ .img-card-comic{
+     cursor: pointer;
+ }
