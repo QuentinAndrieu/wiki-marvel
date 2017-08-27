@@ -1,14 +1,17 @@
-<nav class="header darkred ">
+<div class="navbar-fixed">
+  <nav class="header darkred">
     <div class="nav-wrapper">
+      <ul id="nav-mobile" class="left hide-on-med-and-down">
+        <li><a routerLink="">Main</a></li>
+        <li><a routerLink="/characters">Characters</a></li>
+        <li><a routerLink="/comics">Comics</a></li>
+      </ul>
       <ul class="right hide-on-med-and-down">
-        <li><a href="sass.html"><i class="material-icons">search</i></a></li>
-        <li><a href="badges.html"><i class="material-icons">view_module</i></a></li>
-        <li><a href="collapsible.html"><i class="material-icons">refresh</i></a></li>
-        <li><a href="mobile.html"><i class="material-icons">more_vert</i></a></li>
+        <li><a routerLink=""><i class="material-icons">search</i></a></li>
       </ul>
     </div>
-</nav>
-
+  </nav>
+</div>
 <div class="parallax-container" id="parallaxHeader">
   <div class="parallax" materialize="parallax"><img src="../../assets/images/header-marvel.jpg"></div>
 </div>

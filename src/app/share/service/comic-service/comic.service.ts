@@ -35,14 +35,4 @@ export class ComicService {
 
     return comics;
   }
-
-  getCharactersByComicId(id: Number): Observable<CharacterListResponseAPI> {
-
-    const characters = this.http
-      .get(`${this.baseUrl}/comics/${id}/characters?apikey=${this.apikey}&ts=${this.ts}&hash=${this.hash}`)
-      .map(res => res.json());
-
-    return characters;
-
-  }
 }

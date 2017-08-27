@@ -25,15 +25,11 @@ export class CharacterDetailComponent implements OnInit {
     this.route.paramMap
       .switchMap((params: ParamMap) => this.characterService.getById(+params.get('id')))
       .subscribe(res => this.character = res.data.results[0]);
-
-    this.route.paramMap
-      .switchMap((params: ParamMap) => this.characterService.getComicsByCharacterId(+params.get('id')))
-      .subscribe(res => this.comics = res.data.results);
   }
 
-  goToComicDetail(id: number) {
+  goToComicDetail(resourceURI: string) {
+    const id = resourceURI.split('/').pop();
     this.router.navigate(['/comic', id]);
   }
-
 
 }

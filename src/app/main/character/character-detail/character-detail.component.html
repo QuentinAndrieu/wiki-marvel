@@ -3,17 +3,17 @@
         {{character.name}}</h2>
     <div class="col s12 m6">
         <div class="col s12">
-            <img class="responsive-img" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="">
+            <img class="responsive-img img-character-detail" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}" alt="">
             <p>{{character.description}}</p>
         </div>
     </div>
 
-    <div *ngIf="comics" class="character-detail">
+    <div *ngIf="character.comics.items[0]" class="character-detail">
         <div class="col s12 m6">
             <h3>Comics</h3>
 
             <div class="collection">
-                <a *ngFor="let comic of comics" (click)="goToComicDetail(comic.id)" class="collection-item">{{comic.title}}</a>
+                <a *ngFor="let comic of character.comics.items" (click)="goToComicDetail(comic.resourceURI)" class="collection-item">{{comic.name}}</a>
             </div>
         </div>
     </div>
