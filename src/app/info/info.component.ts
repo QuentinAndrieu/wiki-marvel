@@ -13,7 +13,7 @@ export class InfoComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToCharacterList() {
-    this.router.navigate(['/characters']);
+  goToMain() {
+    this.router.navigate(['']);
   }
 }

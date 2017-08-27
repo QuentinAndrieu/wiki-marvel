@@ -10,10 +10,14 @@ import { MainComponent } from './main/main.component';
 import { CharacterListComponent } from './main/character/character-list/character-list.component';
 import { CharacterCardComponent } from './main/character/character-card/character-card.component';
 import { CharacterService } from './share/service/character-service/character.service';
+import { ComicService } from './share/service/comic-service/comic.service';
 import { FormsModule } from '@angular/forms';
 import { CharacterDetailComponent } from './main/character/character-detail/character-detail.component';
 import { FooterComponent } from './footer/footer.component';
 import { InfoComponent } from './info/info.component';
+import { ComicDetailComponent } from './main/comic/comic-detail/comic-detail.component';
+import { ComicListComponent } from './main/comic/comic-list/comic-list.component';
+import { ComicCardComponent } from './main/comic/comic-card/comic-card.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,10 @@ import { InfoComponent } from './info/info.component';
     CharacterCardComponent,
     CharacterDetailComponent,
     FooterComponent,
-    InfoComponent
+    InfoComponent,
+    ComicDetailComponent,
+    ComicListComponent,
+    ComicCardComponent
   ],
   imports: [
     BrowserModule,
@@ -41,11 +48,16 @@ import { InfoComponent } from './info/info.component';
       }, {
         path: 'character/:id',
         component: CharacterDetailComponent
+      }, {
+        path: 'comics',
+        component: ComicListComponent
+      }, {
+        path: 'comic/:id',
+        component: ComicDetailComponent
       }
-
     ])
   ],
-  providers: [CharacterService],
+  providers: [CharacterService, ComicService],
   bootstrap: [AppComponent]
 })
 

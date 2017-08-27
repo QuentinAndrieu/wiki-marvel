@@ -1,3 +1,4 @@
+import { ComicListResponseAPI } from './../../models/Comic';
 import { Character, CharacterListResponseAPI } from './../../models/Character';
 import { Injectable } from '@angular/core';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
@@ -38,6 +39,13 @@ export class CharacterService {
     return characters;
   }
 
+  getComicsByCharacterId(id: Number): Observable<ComicListResponseAPI> {
 
+    const comics = this.http
+      .get(`${this.baseUrl}/characters/${id}/comics?apikey=${this.apikey}&ts=${this.ts}&hash=${this.hash}`)
+      .map(res => res.json());
 
+    return comics;
+
+  }
 }

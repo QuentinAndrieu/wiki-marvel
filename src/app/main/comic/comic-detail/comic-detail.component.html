@@ -1,0 +1,20 @@
+<div *ngIf="comic">
+  <h2 class="center">
+    {{comic.title}}</h2>
+  <div class="col s12 m6">
+    <div class="col s12">
+      <img class="responsive-img" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}" alt="">
+      <p>{{comic.description}}</p>
+    </div>
+  </div>
+
+  <div *ngIf="characters" class="comic-detail">
+    <div class="col s12 m6">
+      <h3>Characters</h3>
+
+      <div class="collection">
+        <a *ngFor="let character of characters" (click)="goToCharacterDetail(character.id)" class="collection-item">{{character.name}}</a>
+      </div>
+    </div>
+  </div>
+</div>

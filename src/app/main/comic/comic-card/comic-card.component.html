@@ -1,0 +1,10 @@
+<div class="col s12 m4">
+  <div (click)="goToDetail(comic.id)" class="card green comic-card">
+    <div class="card-content white-text">
+      <div class="card-image">
+        <img src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
+      </div>
+      <span class="card-title">{{comic.title}}</span>
+    </div>
+  </div>
+</div>
