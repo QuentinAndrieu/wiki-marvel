@@ -1,4 +1,5 @@
 <div class="row container main-section">
+    <app-loader *ngIf="!character"></app-loader>
     <div *ngIf="character">
         <h2 class="title-character center">
             {{character.name}}</h2>
