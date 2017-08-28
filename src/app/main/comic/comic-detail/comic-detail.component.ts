@@ -30,12 +30,12 @@ export class ComicDetailComponent implements OnInit {
 
   goToCharacterDetail(resourceURI: string) {
     const id = resourceURI.split('/').pop();
-    this.router.navigate(['/character', id]);
+    this.router.navigate(['/characters', id]);
   }
 
   goToCreatorDetail(resourceURI: string) {
     const id = resourceURI.split('/').pop();
-    this.router.navigate(['/creator', id]);
+    this.router.navigate(['/creators', id]);
   }
 
   isLoading() {

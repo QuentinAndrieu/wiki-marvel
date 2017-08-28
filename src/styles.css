@@ -48,3 +48,8 @@ h2 {
 img[hidden] { 
     display: none!important; 
 }
+
+.nav-wrapper .active {
+    background-color: white;
+    color: black;
+}

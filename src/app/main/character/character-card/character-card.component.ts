@@ -19,7 +19,7 @@ export class CharacterCardComponent implements OnInit {
   }
 
   goToDetail(id: number) {
-    this.router.navigate(['/character', id]);
+    this.router.navigate(['/characters', id]);
   }
 
   isLoad() {

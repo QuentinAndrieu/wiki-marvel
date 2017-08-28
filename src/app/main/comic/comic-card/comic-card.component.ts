@@ -19,7 +19,7 @@ export class ComicCardComponent implements OnInit {
   }
 
   goToDetail(id: number) {
-    this.router.navigate(['/comic', id]);
+    this.router.navigate(['/comics', id]);
   }
 
   isLoading() {

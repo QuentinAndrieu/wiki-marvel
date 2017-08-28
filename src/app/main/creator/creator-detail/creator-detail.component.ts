@@ -28,7 +28,7 @@ export class CreatorDetailComponent implements OnInit {
 
   goToComicDetail(resourceURI: string) {
     const id = resourceURI.split('/').pop();
-    this.router.navigate(['/comic', id]);
+    this.router.navigate(['/comics', id]);
   }
 
   isLoading() {

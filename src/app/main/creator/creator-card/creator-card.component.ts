@@ -19,7 +19,7 @@ export class CreatorCardComponent implements OnInit {
   }
 
   goToDetail(id: number) {
-    this.router.navigate(['/creator', id]);
+    this.router.navigate(['/creators', id]);
   }
 
   isLoading() {

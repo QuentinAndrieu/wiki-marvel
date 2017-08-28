@@ -60,19 +60,19 @@ import { CreatorDetailComponent } from './main/creator/creator-detail/creator-de
         path: 'characters',
         component: CharacterListComponent
       }, {
-        path: 'character/:id',
+        path: 'characters/:id',
         component: CharacterDetailComponent
       }, {
         path: 'comics',
         component: ComicListComponent
       }, {
-        path: 'comic/:id',
+        path: 'comics/:id',
         component: ComicDetailComponent
       }, {
         path: 'creators',
         component: CreatorListComponent
       }, {
-        path: 'creator/:id',
+        path: 'creators/:id',
         component: CreatorDetailComponent
       }
     ])
