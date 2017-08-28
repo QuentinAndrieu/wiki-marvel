@@ -1,0 +1,22 @@
+#parallaxHome {
+    height: 600px;
+}
+
+.info {
+    background-color: black;
+    color: white;
+    height: 200px;
+    padding: 50px;
+}
+
+.info-text-container {
+    border: 3px solid white;
+    font-size: 20px;
+    padding: 10px;
+    font-weight: 300%;
+}
+
+.info-text-container:hover {
+    background-color: red;
+    cursor: pointer;
+}

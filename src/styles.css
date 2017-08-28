@@ -1,1 +1,42 @@
 /* You can add global styles to this file, and also import other style files */
+.center {
+    text-align: center;
+}
+
+body{
+    color: black;
+}
+
+.collapsible-body {
+    background-color: white;
+}
+
+.collection a {
+    cursor: pointer;
+}
+
+.loader {
+    height: 400px;
+    padding-top: 200px; 
+}
+
+h2 {
+    color: rgb(236,29,37);
+}
+
+.collection a.collection-item {
+    color: black!important;
+    font-weight: bold;
+}
+
+.title-comic {
+    color: #43a047 ;
+}
+
+.title-character {
+    color: #455a64;
+}
+
+.main-section {
+    min-height: 800px;
+}

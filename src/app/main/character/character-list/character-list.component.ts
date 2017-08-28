@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Characters } from './../../share/models/characters';
-import { Character } from './../../share/models/character';
-import { CharacterService } from './../../share/service/character-service/character.service';
+import { GenericResponseAPI } from '../../../share/models/GenericResponseAPI';
+import { Character } from '../../../share/models/character';
+import { CharacterService } from '../../../share/service/character-service/character.service';
 
 @Component({
   selector: 'app-character-list',
@@ -11,7 +11,7 @@ import { CharacterService } from './../../share/service/character-service/charac
 export class CharacterListComponent implements OnInit {
 
   characters: Character[];
-  name: String;
+  name: String = 'Spider-Man';
 
   constructor(private characterService: CharacterService) { }
 

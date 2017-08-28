@@ -1,18 +1,18 @@
 import { Character } from './Character';
 
-export class Characters {
+export abstract class GenericResponseAPI {
     code: number;
     status: string;
     copyright: string;
     attributionText: string;
     attributionHTML: string;
     etag: string;
-    data: {
-        offset: number;
-        limit: number;
-        total: number;
-        count: number;
-        results: Character[];
-    }
+}
+
+export abstract class GenericDataAPI {
+    offset: number;
+    limit: number;
+    total: number;
+    count: number;
 }
 
