@@ -19,7 +19,7 @@ export class CreatorDetailComponent implements OnInit {
 
   ngOnInit() {
 
-    this.isLoad();
+    this.isLoading();
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.creatorService.getById(+params.get('id')))
