@@ -1,3 +1,4 @@
+import { CreatorService } from './share/service/creator-service/creator.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { MaterializeModule } from 'angular2-materialize';
 import { NgModule } from '@angular/core';
@@ -20,6 +21,9 @@ import { ComicCardComponent } from './main/comic/comic-card/comic-card.component
 import { LoaderComponent } from './loader/loader.component';
 import { HomeComponent } from './main/home/home.component';
 import { SearchComponent } from './main/search/search.component';
+import { CreatorCardComponent } from './main/creator/creator-card/creator-card.component';
+import { CreatorListComponent } from './main/creator/creator-list/creator-list.component';
+import { CreatorDetailComponent } from './main/creator/creator-detail/creator-detail.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,10 @@ import { SearchComponent } from './main/search/search.component';
     ComicCardComponent,
     LoaderComponent,
     HomeComponent,
-    SearchComponent
+    SearchComponent,
+    CreatorCardComponent,
+    CreatorListComponent,
+    CreatorDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -61,10 +68,16 @@ import { SearchComponent } from './main/search/search.component';
       }, {
         path: 'comic/:id',
         component: ComicDetailComponent
+      }, {
+        path: 'creators',
+        component: CreatorListComponent
+      }, {
+        path: 'creator/:id',
+        component: CreatorDetailComponent
       }
     ])
   ],
-  providers: [CharacterService, ComicService],
+  providers: [CharacterService, ComicService, CreatorService],
   bootstrap: [AppComponent]
 })
 

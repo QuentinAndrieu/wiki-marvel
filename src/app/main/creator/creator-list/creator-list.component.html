@@ -1,0 +1,16 @@
+<div class="row container main-section">
+  <h2 class="title-creator">Creators</h2>
+
+  <form class="col s12">
+    <div class="row">
+      <div class="input-field col s12">
+        <input placeholder="Search" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" (ngModelChange)="updateCreatorsSearch()"
+          id="search" class="validate">
+      </div>
+    </div>
+  </form>
+
+  <div *ngFor="let creator of creators">
+    <app-creator-card [creator]="creator"></app-creator-card>
+  </div>
+</div>

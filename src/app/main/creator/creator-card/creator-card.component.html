@@ -1,0 +1,11 @@
+<div class="col s12 m4">
+  <div class="card red darken-1 creator-card">
+    <div *ngIf="creator" class="card-content white-text">
+      <div class="card-image">
+        <app-loader *ngIf="loading"></app-loader>
+        <img [hidden]="loading" (load)="onLoad()" (click)="goToDetail(creator.id)" class="img-creator-card" src="{{creator.thumbnail.path}}.{{creator.thumbnail.extension}}">
+      </div>
+      <span class="card-title">{{creator.fullName}}</span>
+    </div>
+  </div>
+</div>

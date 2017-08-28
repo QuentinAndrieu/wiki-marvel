@@ -37,6 +37,14 @@ h2 {
     color: #455a64;
 }
 
+.title-creator {
+    color: #e53935;
+}
+
 .main-section {
     min-height: 800px;
+}
+
+img[hidden] { 
+    display: none!important; 
 }
