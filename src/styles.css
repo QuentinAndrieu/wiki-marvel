@@ -40,3 +40,7 @@ h2 {
 .main-section {
     min-height: 800px;
 }
+
+img[hidden] { 
+    display: none!important; 
+}
