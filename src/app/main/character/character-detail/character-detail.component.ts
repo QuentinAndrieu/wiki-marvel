@@ -13,7 +13,6 @@ import 'rxjs/add/operator/switchMap';
 export class CharacterDetailComponent implements OnInit {
 
   character: Character;
-  comics: Comic[];
   loading: Boolean = true;
 
   constructor(private characterService: CharacterService,
