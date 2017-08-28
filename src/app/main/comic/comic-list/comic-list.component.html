@@ -10,7 +10,9 @@
     </div>
   </form>
 
-  <div *ngFor="let comic of comics">
+  <app-loader *ngIf="loading"></app-loader>
+
+  <div [hidden]="loading" *ngFor="let comic of comics">
     <app-comic-card [comic]="comic"></app-comic-card>
   </div>
 </div>

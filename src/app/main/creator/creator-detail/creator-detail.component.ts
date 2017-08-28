@@ -11,13 +11,15 @@ import { Component, OnInit } from '@angular/core';
 export class CreatorDetailComponent implements OnInit {
 
   creator: Creator;
-  loading: Boolean = true;
+  loading: Boolean;
 
   constructor(private creatorService: CreatorService,
     private route: ActivatedRoute,
     private router: Router) { }
 
   ngOnInit() {
+
+    this.isLoad();
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.creatorService.getById(+params.get('id')))
@@ -29,7 +31,11 @@ export class CreatorDetailComponent implements OnInit {
     this.router.navigate(['/comic', id]);
   }
 
-  onLoad() {
+  isLoading() {
+    this.loading = true;
+  }
+
+  isLoad() {
     this.loading = false;
   }
 

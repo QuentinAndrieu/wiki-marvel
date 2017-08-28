@@ -7,7 +7,7 @@
                 <div *ngIf="loading" class="center loader-character-detail">
                     <app-loader></app-loader>
                 </div>
-                <img [hidden]="loading" (load)="onLoad()" class="responsive-img img-character-detail" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}"
+                <img [hidden]="loading" (load)="isLoad()" class="responsive-img img-character-detail" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}"
                     alt="">
                 <p>{{character.description}}</p>
             </div>

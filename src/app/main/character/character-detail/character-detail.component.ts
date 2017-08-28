@@ -13,7 +13,7 @@ import 'rxjs/add/operator/switchMap';
 export class CharacterDetailComponent implements OnInit {
 
   character: Character;
-  loading: Boolean = true;
+  loading: Boolean;
 
   constructor(private characterService: CharacterService,
     private route: ActivatedRoute,
@@ -21,6 +21,7 @@ export class CharacterDetailComponent implements OnInit {
 
 
   ngOnInit() {
+    this.isLoading();
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.characterService.getById(+params.get('id')))
@@ -32,7 +33,11 @@ export class CharacterDetailComponent implements OnInit {
     this.router.navigate(['/comic', id]);
   }
 
-  onLoad() {
+  isLoading() {
+    this.loading = true;
+  }
+
+  isLoad() {
     this.loading = false;
   }
 

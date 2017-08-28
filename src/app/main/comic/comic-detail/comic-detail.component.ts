@@ -13,7 +13,7 @@ export class ComicDetailComponent implements OnInit {
 
   comic: Comic;
   characters: Character[];
-  loading: Boolean = true;
+  loading: Boolean;
 
 
   constructor(private comicService: ComicService,
@@ -21,11 +21,11 @@ export class ComicDetailComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+    this.isLoading();
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.comicService.getById(+params.get('id')))
       .subscribe(res => this.comic = res.data.results[0]);
-
   }
 
   goToCharacterDetail(resourceURI: string) {
@@ -38,7 +38,12 @@ export class ComicDetailComponent implements OnInit {
     this.router.navigate(['/creator', id]);
   }
 
-  onLoad() {
+  isLoading() {
+    this.loading = true;
+  }
+
+  isLoad() {
     this.loading = false;
   }
+
 }

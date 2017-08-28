@@ -10,19 +10,23 @@ import { Component, OnInit, Input } from '@angular/core';
 export class CreatorCardComponent implements OnInit {
 
   @Input() creator: Creator;
-  loading: Boolean = true;
+  loading: Boolean;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
-
+    this.isLoading();
   }
 
   goToDetail(id: number) {
     this.router.navigate(['/creator', id]);
   }
 
-  onLoad() {
+  isLoading() {
+    this.loading = true;
+  }
+
+  isLoad() {
     this.loading = false;
   }
 
