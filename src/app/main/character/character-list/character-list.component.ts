@@ -17,32 +17,21 @@ export class CharacterListComponent implements OnInit {
   constructor(private characterService: CharacterService) { }
 
   ngOnInit() {
-    this.isLoading();
 
     this.characterService
       .getByNameStartWith(this.name)
       .subscribe(res => {
         this.characters = res.data.results;
-        this.isLoad();
       });
   }
 
   updateCharactersSearch() {
-    this.isLoading();
 
     this.characterService
       .getByNameStartWith(this.name)
       .subscribe(res => {
         this.characters = res.data.results;
-        this.isLoad();
       });
   }
 
-  isLoad() {
-    this.loading = false;
-  }
-
-  isLoading() {
-    this.loading = true;
-  }
 }
