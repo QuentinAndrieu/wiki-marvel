@@ -4,7 +4,7 @@
       <div class="card-content white-text">
         <div class="card-image">
           <app-loader *ngIf="loading"></app-loader>
-          <img [hidden]="loading" (load)="isLoad()" (click)="goToDetail(comic.id)" class="img-card-comic" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
+          <img [hidden]="loading" (load)="isLoad()" (click)="goToDetail(comic.id)" class="pointer" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}">
         </div>
         <span class="card-title">{{comic.title}}</span>
       </div>

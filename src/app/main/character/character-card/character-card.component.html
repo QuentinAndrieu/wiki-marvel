@@ -4,7 +4,7 @@
       <div *ngIf="character" class="card-content white-text">
         <div class="card-image">
           <app-loader *ngIf="loading"></app-loader>
-          <img [hidden]="loading" (load)="isLoad()" (click)="goToDetail(character.id)" class="img-character-card" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}">
+          <img [hidden]="loading" (load)="isLoad()" (click)="goToDetail(character.id)" class="pointer" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}">
         </div>
         <span class="card-title">{{character.name}}</span>
       </div>
