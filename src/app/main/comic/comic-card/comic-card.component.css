@@ -1,7 +1,24 @@
-.comic-card {
-    height: 700px;
-    max-height: 700px;
-}
- .img-card-comic{
+.img-card-comic{
      cursor: pointer;
- }
+}
+
+.wrapper-comic {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.wrapper-comic:after {
+    padding-top: 180%;
+    /* 16:9 ratio */
+    display: block;
+    content: '';
+}
+
+.card-comic-wrapped {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
