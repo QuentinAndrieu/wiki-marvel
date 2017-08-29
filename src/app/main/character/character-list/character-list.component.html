@@ -10,7 +10,9 @@
     </div>
   </form>
 
-  <div *ngFor="let character of characters">
+  <app-loader *ngIf="loading"></app-loader>
+  
+  <div [hidden]="loading" *ngFor="let character of characters">
     <app-character-card [character]="character"></app-character-card>
   </div>
 </div>

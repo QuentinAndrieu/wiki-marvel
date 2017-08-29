@@ -10,18 +10,23 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ComicCardComponent implements OnInit {
 
   @Input() comic: Comic;
-  loading: Boolean = true;
+  loading: Boolean;
 
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.isLoading();
   }
 
   goToDetail(id: number) {
-    this.router.navigate(['/comic', id]);
+    this.router.navigate(['/comics', id]);
   }
 
-  onLoad() {
+  isLoading() {
+    this.loading = true;
+  }
+
+  isLoad() {
     this.loading = false;
   }
 

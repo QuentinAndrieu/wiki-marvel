@@ -1,25 +1,26 @@
 <div class="row container main-section">
-  <div *ngIf="creator">
-      <h2 class="title-creator center">
-          {{creator.fullName}}</h2>
-      <div class="col s12 m6">
-          <div class="col s12">
-              <div *ngIf="loading" class="center loader-creator-detail">
-                  <app-loader></app-loader>
-              </div>
-              <img [hidden]="loading" (load)="onLoad()" class="responsive-img img-creator-detail" src="{{creator.thumbnail.path}}.{{creator.thumbnail.extension}}"
-                  alt="">
-          </div>
-      </div>
+    <app-loader *ngIf="!creator"></app-loader>
+    <div *ngIf="creator">
+        <h2 class="title-creator center">
+            {{creator.fullName}}</h2>
+        <div class="col s12 m6">
+            <div class="col s12">
+                <div *ngIf="loading" class="center loader-creator-detail">
+                    <app-loader></app-loader>
+                </div>
+                <img [hidden]="loading" (load)="isLoad()" class="responsive-img img-creator-detail" src="{{creator.thumbnail.path}}.{{creator.thumbnail.extension}}"
+                    alt="">
+            </div>
+        </div>
 
-      <div *ngIf="creator.comics.items[0]" class="creator-detail">
-          <div class="col s12 m6">
-              <h3>Comics</h3>
+        <div *ngIf="creator.comics.items[0]" class="creator-detail">
+            <div class="col s12 m6">
+                <h3>Comics</h3>
 
-              <div class="collection">
-                  <a *ngFor="let comic of creator.comics.items" (click)="goToComicDetail(comic.resourceURI)" class="collection-item">{{comic.name}}</a>
-              </div>
-          </div>
-      </div>
-  </div>
+                <div class="collection">
+                    <a *ngFor="let comic of creator.comics.items" (click)="goToComicDetail(comic.resourceURI)" class="collection-item">{{comic.name}}</a>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>

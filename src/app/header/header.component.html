@@ -2,11 +2,11 @@
   <nav class="header darkred">
     <div class="nav-wrapper">
       <ul id="nav-mobile" class="left hide-on-med-and-down">
-        <li><a routerLink="">Home</a></li>
-        <li><a routerLink="/search">Search</a></li>
-        <li><a routerLink="/characters">Characters</a></li>
-        <li><a routerLink="/comics">Comics</a></li>
-        <li><a routerLink="/creators">Creators</a></li>
+        <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><strong>Home</strong></a></li>
+        <li><a routerLink="/search" routerLinkActive="active"><strong>Search</strong></a></li>
+        <li><a routerLink="/characters" routerLinkActive="active"><strong>Characters</strong></a></li>
+        <li><a routerLink="/comics" routerLinkActive="active"><strong>Comics</strong></a></li>
+        <li><a routerLink="/creators" routerLinkActive="active"><strong>Creators</strong></a></li>
       </ul>
       <ul class="right hide-on-med-and-down">
         <li><a routerLink="/search"><i class="material-icons">search</i></a></li>
