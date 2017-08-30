@@ -3,7 +3,7 @@
     <div *ngIf="character">
         <h2 class="title-character center">
             {{character.name}}</h2>
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6 xl6">
             <div class="col s12">
                 <div *ngIf="loading" class="center loader-character-detail">
                     <app-loader></app-loader>
@@ -15,7 +15,7 @@
         </div>
 
         <div *ngIf="character.comics.items[0]" class="character-detail">
-            <div class="col s12 m6">
+            <div class="col s12 m12 l6 xl6">
                 <h3>Comics</h3>
 
                 <div class="collection">

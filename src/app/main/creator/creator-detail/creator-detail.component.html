@@ -3,7 +3,7 @@
     <div *ngIf="creator">
         <h2 class="title-creator center">
             {{creator.fullName}}</h2>
-        <div class="col s12 m6">
+        <div class="col s12 m12 l6 xl6">
             <div class="col s12">
                 <div *ngIf="loading" class="center loader-creator-detail">
                     <app-loader></app-loader>
@@ -14,7 +14,7 @@
         </div>
 
         <div *ngIf="creator.comics.items[0]" class="creator-detail">
-            <div class="col s12 m6">
+            <div class="col s12 m12 l6 xl6">
                 <h3>Comics</h3>
 
                 <div class="collection">
