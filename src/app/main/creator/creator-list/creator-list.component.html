@@ -11,7 +11,7 @@
   </form>
 
 
-  <app-loader *ngIf="loading"></app-loader>
+  <app-loader *ngIf="!creators"></app-loader>
 
   <div [hidden]="loading" *ngFor="let creator of creators">
     <app-creator-card [creator]="creator"></app-creator-card>

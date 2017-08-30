@@ -1,8 +1,20 @@
-.creator-card {
-    height: 660px;
-    max-height: 660px;
+.wrapper-creator {
+    width: 100%;
+    display: inline-block;
+    position: relative;
 }
 
-.img-creator-card{
-    cursor: pointer;
+.wrapper-creator:after {
+    padding-top: 160%;
+    /* 16:9 ratio */
+    display: block;
+    content: '';
+}
+
+.card-creator-wrapped {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }

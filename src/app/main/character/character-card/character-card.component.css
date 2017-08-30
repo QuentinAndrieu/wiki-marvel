@@ -1,8 +1,20 @@
-.character-card {
-    height: 600px;
-    max-height: 600px;
+.wrapper-character {
+    width: 100%;
+    display: inline-block;
+    position: relative;
 }
 
-.img-character-card{
-    cursor: pointer;
+.wrapper-character:after {
+    padding-top: 150%;
+    /* 16:9 ratio */
+    display: block;
+    content: '';
+}
+
+.card-character-wrapped {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }

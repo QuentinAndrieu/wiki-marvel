@@ -1,4 +1,20 @@
-.search-card {
-    height: 650px;
-    cursor: pointer;
+.wrapper-search {
+    width: 100%;
+    display: inline-block;
+    position: relative;
+}
+
+.wrapper-search:after {
+    padding-top: 165%;
+    /* 16:9 ratio */
+    display: block;
+    content: '';
+}
+
+.card-search-wrapped {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
 }

@@ -3,15 +3,15 @@
   <div *ngIf="comic">
     <h2 class="title-comic center">
       {{comic.title}}</h2>
-    <div class="col s12 m6">
+    <div class="col s12 m12 l6 xl6">
       <div class="col s12">
         <app-loader *ngIf="loading"></app-loader>
-        <img [hidden]="loading" (load)="isLoad()" class="responsive-img img-comic-detail" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}"
+        <img [hidden]="loading" (load)="isLoad()" class="responsive-img margin-top-detail" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}"
           alt="">
         <p>{{comic.description}}</p>
         <p><strong>Creators</strong> :
           <span *ngFor="let creator of comic.creators.items">
-          <span class="link-creator"(click)="goToCreatorDetail(creator.resourceURI)">{{creator.name}}  
+          <span class="link-creator pointer"(click)="goToCreatorDetail(creator.resourceURI)">{{creator.name}}  
             </span> /
           </span>
         </p>
@@ -20,7 +20,7 @@
     </div>
 
     <div *ngIf="comic.characters.items[0]" class="comic-detail">
-      <div class="col s12 m6">
+      <div class="col s12 m12 l6 xl6">
         <h3>Characters</h3>
 
         <div class="collection">

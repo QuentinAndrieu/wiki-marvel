@@ -53,3 +53,12 @@ img[hidden] {
     background-color: white;
     color: black;
 }
+
+.pointer {
+    cursor: pointer;
+}
+
+.margin-top-detail {
+    margin-top: 86px;
+}
+

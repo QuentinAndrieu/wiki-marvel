@@ -1,11 +1,13 @@
-<div class="col s12 m4">
-  <div class="card red darken-1 creator-card">
-    <div *ngIf="creator" class="card-content white-text">
-      <div class="card-image">
-        <app-loader *ngIf="loading"></app-loader>
-        <img [hidden]="loading" (load)="isLoad()" (click)="goToDetail(creator.id)" class="img-creator-card" src="{{creator.thumbnail.path}}.{{creator.thumbnail.extension}}">
+<div class="col s12 m12 l6 xl4">
+  <div class="wrapper-creator">
+    <div class="card-creator-wrapped card red darken-1 creator-card">
+      <div *ngIf="creator" class="card-content white-text">
+        <div class="card-image">
+          <app-loader *ngIf="loading"></app-loader>
+          <img [hidden]="loading" (load)="isLoad()" (click)="goToDetail(creator.id)" class="pointer" src="{{creator.thumbnail.path}}.{{creator.thumbnail.extension}}">
+        </div>
+        <span class="card-title">{{creator.fullName}}</span>
       </div>
-      <span class="card-title">{{creator.fullName}}</span>
     </div>
   </div>
 </div>

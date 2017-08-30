@@ -16,33 +16,22 @@ export class CreatorListComponent implements OnInit {
   constructor(private creatorService: CreatorService) { }
 
   ngOnInit() {
-    this.isLoading();
 
     this.creatorService
       .getByNameStartWith(this.name)
       .subscribe(res => {
         this.creators = res.data.results;
-        this.isLoad();
       });
   }
 
   updateCreatorsSearch() {
-    this.isLoading();
 
     this.creatorService
       .getByNameStartWith(this.name)
       .subscribe(res => {
         this.creators = res.data.results;
-        this.isLoad();
       });
   }
 
-  isLoad() {
-    this.loading = false;
-  }
-
-  isLoading() {
-    this.loading = true;
-  }
 
 }

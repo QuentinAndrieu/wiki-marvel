@@ -16,32 +16,21 @@ export class ComicListComponent implements OnInit {
   constructor(private comicService: ComicService) { }
 
   ngOnInit() {
-    this.isLoading();
 
     this.comicService
       .getByTitleStartWith(this.title)
       .subscribe(res => {
         this.comics = res.data.results;
-        this.isLoad();
       });
   }
 
   updateComicsSearch() {
-    this.isLoading();
 
     this.comicService
       .getByTitleStartWith(this.title)
       .subscribe(res => {
         this.comics = res.data.results;
-        this.isLoad();
       });
   }
 
-  isLoad() {
-    this.loading = false;
-  }
-
-  isLoading() {
-    this.loading = true;
-  }
 }
