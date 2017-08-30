@@ -13,7 +13,8 @@
 
   <app-loader *ngIf="!creators"></app-loader>
 
-  <div [hidden]="loading" *ngFor="let creator of creators">
-    <app-creator-card [creator]="creator"></app-creator-card>
+  <div *ngFor="let creator of creators">
+      <app-card [color]="'red darken-1'" [pathImg]="creator.thumbnail.path + '.' + creator.thumbnail.extension" [urlDetail]="'/creators/' + creator.id"
+      [title]="creator.fullName"></app-card>
   </div>
 </div>

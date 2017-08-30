@@ -13,6 +13,7 @@
   <app-loader *ngIf="!comics"></app-loader>
 
   <div *ngFor="let comic of comics">
-    <app-comic-card [comic]="comic"></app-comic-card>
+    <app-card [color]="'green darken-1'" [pathImg]="comic.thumbnail.path + '.' + comic.thumbnail.extension" [urlDetail]="'/comics/' + comic.id"
+      [title]="comic.title"></app-card>
   </div>
 </div>

@@ -11,8 +11,9 @@
   </form>
 
   <app-loader *ngIf="!characters"></app-loader>
-  
+
   <div *ngFor="let character of characters">
-    <app-character-card [character]="character"></app-character-card>
+    <app-card [color]="'blue-grey darken-1'" [pathImg]="character.thumbnail.path + '.' + character.thumbnail.extension" [urlDetail]="'/characters/' + character.id"
+      [title]="character.name"></app-card>
   </div>
 </div>

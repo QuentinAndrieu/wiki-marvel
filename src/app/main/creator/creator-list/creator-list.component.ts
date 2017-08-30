@@ -11,7 +11,6 @@ export class CreatorListComponent implements OnInit {
 
   creators: Creator[];
   name: String = 'Stan Lee';
-  loading: Boolean;
 
   constructor(private creatorService: CreatorService) { }
 
@@ -32,6 +31,5 @@ export class CreatorListComponent implements OnInit {
         this.creators = res.data.results;
       });
   }
-
 
 }

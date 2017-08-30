@@ -12,8 +12,7 @@ export class CharacterListComponent implements OnInit {
 
   characters: Character[];
   name: String = 'Spider-Man';
-  loading: Boolean;
-
+  
   constructor(private characterService: CharacterService) { }
 
   ngOnInit() {
