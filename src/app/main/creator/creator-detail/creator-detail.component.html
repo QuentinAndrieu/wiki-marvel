@@ -8,7 +8,7 @@
                 <div *ngIf="loading" class="center loader-creator-detail">
                     <app-loader></app-loader>
                 </div>
-                <img [hidden]="loading" (load)="isLoad()" class="responsive-img margin-top-detail" src="{{creator.thumbnail.path}}.{{creator.thumbnail.extension}}"
+                <img [hidden]="loading" (load)="setLoading(false)" class="responsive-img margin-top-detail" src="{{creator.thumbnail.path}}.{{creator.thumbnail.extension}}"
                     alt="">
             </div>
         </div>

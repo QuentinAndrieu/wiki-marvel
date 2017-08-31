@@ -21,7 +21,7 @@ export class ComicDetailComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    this.isLoading();
+    this.setLoading(true);
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.comicService.getById(+params.get('id')))
@@ -33,12 +33,7 @@ export class ComicDetailComponent implements OnInit {
     this.router.navigate([path, id]);
   }
 
-  isLoading() {
-    this.loading = true;
-  }
-
-  isLoad() {
-    this.loading = false;
-  }
-
+  setLoading(loading: Boolean) {
+    this.loading = loading;
+}
 }

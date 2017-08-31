@@ -28,9 +28,4 @@ export class CardComponent implements OnInit {
   setLoading(loading: Boolean) {
     this.loading = loading;
   }
-
-  getLoading(loading: Boolean) {
-    return this.loading;
-  }
-
 }

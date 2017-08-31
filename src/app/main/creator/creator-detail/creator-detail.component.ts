@@ -19,7 +19,7 @@ export class CreatorDetailComponent implements OnInit {
 
   ngOnInit() {
 
-    this.isLoading();
+    this.setLoading(true);
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.creatorService.getById(+params.get('id')))
@@ -31,12 +31,7 @@ export class CreatorDetailComponent implements OnInit {
     this.router.navigate([path, id]);
   }
 
-  isLoading() {
-    this.loading = true;
+  setLoading(loading: Boolean) {
+    this.loading = loading;
   }
-
-  isLoad() {
-    this.loading = false;
-  }
-
 }

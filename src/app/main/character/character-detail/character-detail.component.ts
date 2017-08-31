@@ -21,7 +21,7 @@ export class CharacterDetailComponent implements OnInit {
 
 
   ngOnInit() {
-    this.isLoading();
+    this.setLoading(true);
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.characterService.getById(+params.get('id')))
@@ -33,12 +33,7 @@ export class CharacterDetailComponent implements OnInit {
     this.router.navigate([path, id]);
   }
 
-  isLoading() {
-    this.loading = true;
+  setLoading(loading: Boolean) {
+    this.loading = loading;
   }
-
-  isLoad() {
-    this.loading = false;
-  }
-
 }

@@ -6,7 +6,7 @@
     <div class="col s12 m12 l6 xl6">
       <div class="col s12">
         <app-loader *ngIf="loading"></app-loader>
-        <img [hidden]="loading" (load)="isLoad()" class="responsive-img margin-top-detail" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}"
+        <img [hidden]="loading" (load)="setLoading(false)" class="responsive-img margin-top-detail" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}"
           alt="">
         <p>{{comic.description}}</p>
         <p><strong>Creators</strong> :
