@@ -1,17 +1,17 @@
-.wrapper-comic {
+.wrapper-card {
     width: 100%;
     display: inline-block;
     position: relative;
 }
 
-.wrapper-comic:after {
-    padding-top: 180%;
+.wrapper-card:after {
+    padding-top: 160%;
     /* 16:9 ratio */
     display: block;
     content: '';
 }
 
-.card-comic-wrapped {
+.card-wrapped {
     position: absolute;
     top: 0;
     bottom: 0;

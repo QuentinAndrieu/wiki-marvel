@@ -11,7 +11,6 @@ export class ComicListComponent implements OnInit {
 
   comics: Comic[];
   title: String = 'Avengers';
-  loading: Boolean;
 
   constructor(private comicService: ComicService) { }
 
