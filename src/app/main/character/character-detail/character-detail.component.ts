@@ -28,9 +28,9 @@ export class CharacterDetailComponent implements OnInit {
       .subscribe(res => this.character = res.data.results[0]);
   }
 
-  goToComicDetail(resourceURI: string) {
+  goTo(path: string, resourceURI: string) {
     const id = resourceURI.split('/').pop();
-    this.router.navigate(['/comics', id]);
+    this.router.navigate([path, id]);
   }
 
   isLoading() {

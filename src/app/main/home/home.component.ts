@@ -13,7 +13,7 @@ export class HomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  goToSearch() {
-    this.router.navigate(['search']);
+  goTo(path: string) {
+    this.router.navigate([path]);
   }
 }

@@ -28,14 +28,9 @@ export class ComicDetailComponent implements OnInit {
       .subscribe(res => this.comic = res.data.results[0]);
   }
 
-  goToCharacterDetail(resourceURI: string) {
+  goTo(path: string, resourceURI: string) {
     const id = resourceURI.split('/').pop();
-    this.router.navigate(['/characters', id]);
-  }
-
-  goToCreatorDetail(resourceURI: string) {
-    const id = resourceURI.split('/').pop();
-    this.router.navigate(['/creators', id]);
+    this.router.navigate([path, id]);
   }
 
   isLoading() {

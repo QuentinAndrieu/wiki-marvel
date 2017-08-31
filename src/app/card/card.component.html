@@ -3,8 +3,8 @@
     <div class="card-wrapped card" [ngClass]="color">
       <div class="card-content white-text">
         <div class="card-image">
-          <app-loader *ngIf="loading"></app-loader>
-          <img [hidden]="loading" (load)="isLoad()" (click)="goToDetail(urlDetail)" class="pointer" src="{{pathImg}}">
+          <app-loader *ngIf="getLoading()"></app-loader>
+          <img [hidden]="getLoading()" (load)="setLoading(false)" (click)="goTo(urlDetail)" class="pointer" src="{{pathImg}}">
         </div>
         <span class="card-title truncate">{{title}}</span>
       </div>

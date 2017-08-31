@@ -11,7 +11,7 @@
         <p>{{comic.description}}</p>
         <p><strong>Creators</strong> :
           <span *ngFor="let creator of comic.creators.items">
-          <span class="link-creator pointer"(click)="goToCreatorDetail(creator.resourceURI)">{{creator.name}}  
+          <span class="link-creator pointer"(click)="goTo('/creators', creator.resourceURI)">{{creator.name}}  
             </span> /
           </span>
         </p>
@@ -24,7 +24,7 @@
         <h3>Characters</h3>
 
         <div class="collection">
-          <a *ngFor="let character of comic.characters.items" (click)="goToCharacterDetail(character.resourceURI)" class="collection-item">{{character.name}}</a>
+          <a *ngFor="let character of comic.characters.items" (click)="goTo('/characters', character.resourceURI)" class="collection-item">{{character.name}}</a>
         </div>
       </div>
     </div>
