@@ -1,4 +1,4 @@
-<div class="row container main-section">
+<div class="row container">
     <app-loader *ngIf="!character"></app-loader>
     <div *ngIf="character">
         <h2 class="title-character center">
@@ -8,7 +8,7 @@
                 <div *ngIf="loading" class="center loader-character-detail">
                     <app-loader></app-loader>
                 </div>
-                <img [hidden]="loading" (load)="isLoad()" class="responsive-img margin-top-detail" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}"
+                <img [hidden]="loading" (load)="setLoading(false)" class="responsive-img margin-top-detail" src="{{character.thumbnail.path}}.{{character.thumbnail.extension}}"
                     alt="">
                 <p>{{character.description}}</p>
             </div>
@@ -19,7 +19,7 @@
                 <h3>Comics</h3>
 
                 <div class="collection">
-                    <a *ngFor="let comic of character.comics.items" (click)="goToComicDetail(comic.resourceURI)" class="collection-item">{{comic.name}}</a>
+                    <a *ngFor="let comic of character.comics.items" (click)="goTo('/comics', comic.resourceURI)" class="collection-item">{{comic.name}}</a>
                 </div>
             </div>
         </div>

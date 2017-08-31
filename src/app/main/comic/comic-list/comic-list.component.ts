@@ -10,26 +10,32 @@ import { Component, OnInit } from '@angular/core';
 export class ComicListComponent implements OnInit {
 
   comics: Comic[];
-  title: String = 'Avengers';
+  title: String;
 
   constructor(private comicService: ComicService) { }
 
   ngOnInit() {
 
-    this.comicService
-      .getByTitleStartWith(this.title)
-      .subscribe(res => {
-        this.comics = res.data.results;
-      });
-  }
-
-  updateComicsSearch() {
+    this.title = 'Avengers'
 
     this.comicService
       .getByTitleStartWith(this.title)
       .subscribe(res => {
-        this.comics = res.data.results;
+        this.setComics(res.data.results);
       });
   }
 
+  updateSearch(title: string) {
+    if (title) {
+      this.comicService
+        .getByTitleStartWith(title)
+        .subscribe(res => {
+          this.setComics(res.data.results);
+        });
+    }
+  }
+
+  setComics(comics: Comic[]) {
+    this.comics = comics;
+  }
 }

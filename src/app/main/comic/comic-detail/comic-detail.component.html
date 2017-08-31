@@ -1,4 +1,4 @@
-<div class="row container main-section">
+<div class="row container">
   <app-loader *ngIf="!comic"></app-loader>
   <div *ngIf="comic">
     <h2 class="title-comic center">
@@ -6,12 +6,12 @@
     <div class="col s12 m12 l6 xl6">
       <div class="col s12">
         <app-loader *ngIf="loading"></app-loader>
-        <img [hidden]="loading" (load)="isLoad()" class="responsive-img margin-top-detail" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}"
+        <img [hidden]="loading" (load)="setLoading(false)" class="responsive-img margin-top-detail" src="{{comic.thumbnail.path}}.{{comic.thumbnail.extension}}"
           alt="">
         <p>{{comic.description}}</p>
         <p><strong>Creators</strong> :
           <span *ngFor="let creator of comic.creators.items">
-          <span class="link-creator pointer"(click)="goToCreatorDetail(creator.resourceURI)">{{creator.name}}  
+          <span class="link-creator pointer"(click)="goTo('/creators', creator.resourceURI)">{{creator.name}}  
             </span> /
           </span>
         </p>
@@ -24,7 +24,7 @@
         <h3>Characters</h3>
 
         <div class="collection">
-          <a *ngFor="let character of comic.characters.items" (click)="goToCharacterDetail(character.resourceURI)" class="collection-item">{{character.name}}</a>
+          <a *ngFor="let character of comic.characters.items" (click)="goTo('/characters', character.resourceURI)" class="collection-item">{{character.name}}</a>
         </div>
       </div>
     </div>

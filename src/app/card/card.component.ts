@@ -18,18 +18,14 @@ export class CardComponent implements OnInit {
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.setLoading(true);
   }
 
-  goToDetail(id: number) {
-    this.router.navigate([this.urlDetail]);
+  goTo(urlDetail: string) {
+    this.router.navigate([urlDetail]);
   }
 
-  isLoad() {
-    this.loading = false;
+  setLoading(loading: Boolean) {
+    this.loading = loading;
   }
-
-  isLoading() {
-    this.loading = true;
-  }
-
 }

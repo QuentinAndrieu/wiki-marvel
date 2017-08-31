@@ -21,29 +21,19 @@ export class ComicDetailComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-    this.isLoading();
+    this.setLoading(true);
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.comicService.getById(+params.get('id')))
       .subscribe(res => this.comic = res.data.results[0]);
   }
 
-  goToCharacterDetail(resourceURI: string) {
+  goTo(path: string, resourceURI: string) {
     const id = resourceURI.split('/').pop();
-    this.router.navigate(['/characters', id]);
+    this.router.navigate([path, id]);
   }
 
-  goToCreatorDetail(resourceURI: string) {
-    const id = resourceURI.split('/').pop();
-    this.router.navigate(['/creators', id]);
+  setLoading(loading: Boolean) {
+    this.loading = loading;
   }
-
-  isLoading() {
-    this.loading = true;
-  }
-
-  isLoad() {
-    this.loading = false;
-  }
-
 }
