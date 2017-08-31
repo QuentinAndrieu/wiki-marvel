@@ -4,7 +4,7 @@
   <form class="col s12">
     <div class="row">
       <div class="input-field col s12">
-        <input placeholder="Search" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" (ngModelChange)="updateCharactersSearch()"
+        <input placeholder="Search" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" (ngModelChange)="updateSearch(name)"
           id="search" class="validate">
       </div>
     </div>

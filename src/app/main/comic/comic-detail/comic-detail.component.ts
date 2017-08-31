@@ -35,5 +35,5 @@ export class ComicDetailComponent implements OnInit {
 
   setLoading(loading: Boolean) {
     this.loading = loading;
-}
+  }
 }

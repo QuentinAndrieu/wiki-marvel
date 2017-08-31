@@ -1,6 +1,6 @@
+import { Character } from './../../../share/models/Character';
 import { Component, OnInit } from '@angular/core';
 import { GenericResponseAPI } from '../../../share/models/GenericResponseAPI';
-import { Character } from '../../../share/models/character';
 import { CharacterService } from '../../../share/service/character-service/character.service';
 
 @Component({
@@ -11,26 +11,33 @@ import { CharacterService } from '../../../share/service/character-service/chara
 export class CharacterListComponent implements OnInit {
 
   characters: Character[];
-  name: String = 'Spider-Man';
-  
+  name: String;
+
   constructor(private characterService: CharacterService) { }
 
   ngOnInit() {
 
+    this.name = 'Spider-Man';
+
     this.characterService
       .getByNameStartWith(this.name)
       .subscribe(res => {
-        this.characters = res.data.results;
+        this.setCharacters(res.data.results);
       });
   }
 
-  updateCharactersSearch() {
+  updateSearch(name: string) {
+    if (name) {
+      this.characterService
+        .getByNameStartWith(name)
+        .subscribe(res => {
+          this.setCharacters(res.data.results);
+        });
+    }
+  }
 
-    this.characterService
-      .getByNameStartWith(this.name)
-      .subscribe(res => {
-        this.characters = res.data.results;
-      });
+  setCharacters(characters: Character[]) {
+    this.characters = characters;
   }
 
 }

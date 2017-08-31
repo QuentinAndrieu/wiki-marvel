@@ -4,12 +4,11 @@
   <form class="col s12">
     <div class="row">
       <div class="input-field col s12">
-        <input placeholder="Search" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" (ngModelChange)="updateCreatorsSearch()"
+        <input placeholder="Search" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" (ngModelChange)="updateSearch(name)"
           id="search" class="validate">
       </div>
     </div>
   </form>
-
 
   <app-loader *ngIf="!creators"></app-loader>
 

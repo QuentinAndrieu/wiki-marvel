@@ -10,26 +10,32 @@ import { Component, OnInit } from '@angular/core';
 export class CreatorListComponent implements OnInit {
 
   creators: Creator[];
-  name: String = 'Stan Lee';
+  name: String;
 
   constructor(private creatorService: CreatorService) { }
 
   ngOnInit() {
 
-    this.creatorService
-      .getByNameStartWith(this.name)
-      .subscribe(res => {
-        this.creators = res.data.results;
-      });
-  }
-
-  updateCreatorsSearch() {
+    this.name = 'Stan Lee';
 
     this.creatorService
       .getByNameStartWith(this.name)
       .subscribe(res => {
-        this.creators = res.data.results;
+        this.setCreators(res.data.results);
       });
   }
 
+  updateSearch(name: string) {
+    if (name) {
+      this.creatorService
+        .getByNameStartWith(name)
+        .subscribe(res => {
+          this.setCreators(res.data.results);
+        });
+    }
+  }
+
+  setCreators(creators: Creator[]) {
+    this.creators = creators;
+  }
 }

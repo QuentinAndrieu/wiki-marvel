@@ -36,7 +36,8 @@ export class CharacterService {
       .get(`${this.baseUrl}/characters?nameStartsWith=${name}&apikey=${this.apikey}&ts=${this.ts}&hash=${this.hash}`)
       .map(res => res.json());
 
-    return characters;
+
+    return characters || null;
   }
 
 }
