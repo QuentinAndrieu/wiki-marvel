@@ -43,7 +43,7 @@ testem.log
 Thumbs.db
 
 # config
-config.ts
+src/app/share/config/
 
 # npmrc
 .npmrc

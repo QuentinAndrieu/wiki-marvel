@@ -3,7 +3,7 @@
     text-align: center;
 }
 
-body{
+body {
     color: black;
 }
 
@@ -42,7 +42,7 @@ h2 {
 }
 
 .main-section {
-    min-height: 800px;
+    min-height: 700px;
 }
 
 img[hidden] { 
@@ -61,4 +61,5 @@ img[hidden] {
 .margin-top-detail {
     margin-top: 86px;
 }
+
 

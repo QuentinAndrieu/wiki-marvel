@@ -1,4 +1,4 @@
-import { Config } from './../../../../../config';
+import { Config } from './../../config/config';
 import { ComicListResponseAPI } from './../../models/Comic';
 import { Character, CharacterListResponseAPI } from './../../models/Character';
 import { Injectable } from '@angular/core';

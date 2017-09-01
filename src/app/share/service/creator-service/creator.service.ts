@@ -1,4 +1,4 @@
-import { Config } from './../../../../../config';
+import { Config } from './../../config/config';
 import { Md5 } from 'ts-md5/dist/md5';
 import { CreatorListResponseAPI } from './../../models/Creator';
 import { Observable } from 'rxjs/Observable';
