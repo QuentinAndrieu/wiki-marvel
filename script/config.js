@@ -1,7 +1,7 @@
 const fs = require('fs');
 
-if (!fs.existsSync('src/app/share/config/config.ts')) {
-    fs.writeFile('share/config/config.ts', initConfig(), function (error) {
+if (!fs.existsSync('src/app/share/config.ts')) {
+    fs.writeFile('src/app/share/config.ts', initConfig(), function (error) {
         if (error) {
             return console.log(error);
         }
