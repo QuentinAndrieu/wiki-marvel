@@ -42,7 +42,11 @@ h2 {
 }
 
 .main-section {
-    min-height: 700px;
+    min-height: 1000px;
+}
+
+.home-section{
+    min-height: 500px;
 }
 
 img[hidden] { 
