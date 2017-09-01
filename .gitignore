@@ -42,7 +42,8 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Config
-src/app/share/config/*
+# config
+config.ts
 
+# npmrc
 .npmrc

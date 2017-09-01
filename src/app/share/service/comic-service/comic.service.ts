@@ -1,8 +1,8 @@
+import { Config } from './../../../../../config';
 import { CharacterListResponseAPI } from './../../models/Character';
 import { ComicListResponseAPI } from './../../models/Comic';
 import { Md5 } from 'ts-md5/dist/md5';
 import { Observable } from 'rxjs/Observable';
-import { Config } from './../../config/config';
 import { Injectable } from '@angular/core';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 

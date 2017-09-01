@@ -4,9 +4,8 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Init project
 
-Create a folder name 'config' in 'src/app/share'
 
-Create a file name Config.ts inside the config folder, and a class 'Config' :
+Create a file name config.ts at the racine of the project :
 
 export class Config {
     public static BASEURL: String = 'baseURLMarvelAPI';

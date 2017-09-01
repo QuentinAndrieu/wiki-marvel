@@ -1,7 +1,7 @@
+import { Config } from './../../../../../config';
 import { Md5 } from 'ts-md5/dist/md5';
 import { CreatorListResponseAPI } from './../../models/Creator';
 import { Observable } from 'rxjs/Observable';
-import { Config } from './../../config/config';
 import { Injectable } from '@angular/core';
 import { Http, Response, RequestOptions, Headers } from '@angular/http';
 

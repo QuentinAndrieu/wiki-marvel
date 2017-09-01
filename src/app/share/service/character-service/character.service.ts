@@ -1,3 +1,4 @@
+import { Config } from './../../../../../config';
 import { ComicListResponseAPI } from './../../models/Comic';
 import { Character, CharacterListResponseAPI } from './../../models/Character';
 import { Injectable } from '@angular/core';
@@ -6,7 +7,6 @@ import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 import { GenericResponseAPI } from './../../models/GenericResponseAPI';
 import { Md5 } from 'ts-md5/dist/md5';
-import { Config } from './../../config/config';
 
 @Injectable()
 export class CharacterService {
