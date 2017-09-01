@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-if (!fs.existsSync('share/config.ts')) {
+if (!fs.existsSync('src/app/share/config.ts')) {
     fs.writeFile('share/config.ts', initConfig(), function (error) {
         if (error) {
             return console.log(error);
