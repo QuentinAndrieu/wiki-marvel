@@ -1,4 +1,4 @@
-import { Config } from './../../config';
+import { Config } from '../../config';
 import { CharacterListResponseAPI } from './../../models/Character';
 import { ComicListResponseAPI } from './../../models/Comic';
 import { Md5 } from 'ts-md5/dist/md5';
