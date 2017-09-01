@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class CreatorListComponent implements OnInit {
 
   creators: Creator[];
-  name: String;
+  name: string;
 
   constructor(private creatorService: CreatorService) { }
 

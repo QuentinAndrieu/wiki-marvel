@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class ComicListComponent implements OnInit {
 
   comics: Comic[];
-  title: String;
+  title: string;
 
   constructor(private comicService: ComicService) { }
 
