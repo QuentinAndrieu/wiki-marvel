@@ -6,6 +6,7 @@ if (!fs.existsSync('config.ts')) {
             return console.log(error);
         }
         console.log('The file was saved!');
+        console.log(initConfig());
     });
 } else {
     console.log('config.ts already exist')
