@@ -4,16 +4,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 ## Init project
 
-
-Create a file name config.ts at the racine of the project :
-
-export class Config {
-    public static BASEURL: String = 'baseURLMarvelAPI';
-    public static PRIVATE_KEY: String = 'yourPrivateKeyMarvelAPI';
-    public static PUBLIC_KEY: String = 'yourPuplicKeyMarvelAPI';
-}
-
-Replace the values by the values of your Marvel API account.
+Update the script/config.ts with the values of your Marvel API account.
 
 Run 'npm install'
 
@@ -22,3 +13,11 @@ Run 'npm install'
 Run `ng serve` for a dev server. 
 
 Navigate to `http://localhost:4200/`.
+
+## Deploy project on Herok
+
+Create account on Heroku 
+
+Set env variable BASEURL, PRIVATE_KEY et PUBLIC_KEY in heroku
+
+Push on heroku 
