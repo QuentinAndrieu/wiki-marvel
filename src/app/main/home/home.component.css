@@ -2,6 +2,10 @@
     height: 600px;
 }
 
+#parallaxHomeMobile {
+    height: 300px;
+}
+
 .info {
     color: white;
     height: 200px;
@@ -18,4 +22,17 @@
 .info-text-container:hover {
     background-color: red;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 500px) {
+    .info {
+        height: 140px;
+        padding: 25px;
+    }
+    
+    .info-text-container {
+        font-size: 15px;
+        padding: 5px;
+        font-weight: 300%;
+    }
 }

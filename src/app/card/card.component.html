@@ -6,7 +6,7 @@
           <app-loader *ngIf="loading"></app-loader>
           <img [hidden]="loading" (load)="setLoading(false)" (click)="goTo(urlDetail)" class="pointer" src="{{pathImg}}">
         </div>
-        <span class="card-title truncate">{{title}}</span>
+        <span class="card-title truncate"><strong>{{title}}</strong></span>
       </div>
     </div>
   </div>
