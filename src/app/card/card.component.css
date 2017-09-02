@@ -18,3 +18,12 @@
     right: 0;
     left: 0;
 }
+
+.card-image {
+    width:38%;
+}
+
+.card-image img{
+    width:100%;
+}
+
