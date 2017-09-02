@@ -12,8 +12,16 @@
 
   <app-loader *ngIf="!characters"></app-loader>
 
-  <div *ngFor="let character of characters">
+  <div class="hide-on-small-only" *ngFor="let character of characters">
     <app-card [color]="'blue-grey darken-1'" [pathImg]="character.thumbnail.path + '.' + character.thumbnail.extension" [urlDetail]="'/characters/' + character.id"
       [title]="character.name"></app-card>
   </div>
+
+  <ul class="collection hide-on-med-and-up">
+    <li *ngFor="let character of characters" routerLink="{{'/characters/' + character.id}}" class="pointer collection-item avatar blue-grey-text">
+      <img src="{{character.thumbnail.path + '.' + character.thumbnail.extension}}" alt="" class="circle">
+      <span class="title"><strong>{{character.name}}</strong></span>
+      <p class="truncate">{{character.description}}</p>
+    </li>
+  </ul>
 </div>
