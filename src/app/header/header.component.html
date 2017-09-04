@@ -2,14 +2,17 @@
   <div class="navbar-fixed">
     <nav class="black">
       <div class="nav-wrapper">
-        <ul id="nav-mobile" class="left hide-on-small-only">
+        <a href="#" class="brand-logo-fix hide-on-small-only">
+           <img class="responsive-img pointer" src="../../assets/images/marvel-logo.png">
+        </a>
+        <ul id="nav-mobile" class="right hide-on-small-only">
           <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><strong>Home</strong></a></li>
           <li><a routerLink="/search" routerLinkActive="active"><strong>Search</strong></a></li>
           <li><a routerLink="/characters" routerLinkActive="active"><strong>Characters</strong></a></li>
           <li><a routerLink="/comics" routerLinkActive="active"><strong>Comics</strong></a></li>
           <li><a routerLink="/creators" routerLinkActive="active"><strong>Creators</strong></a></li>
         </ul>
-        <ul class="left hide-on-med-and-up">
+        <ul class="right hide-on-med-and-up">
             <li><a routerLink="" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><i class="material-icons">home</i></a></li>
             <li><a routerLink="/search" routerLinkActive="active"><i class="material-icons">search</i></a></li>
             <li><a routerLink="/characters" routerLinkActive="active"><strong><i class="material-icons">person</i></strong></a></li>
@@ -19,5 +22,4 @@
       </div>
     </nav>
   </div>
-
 </header>
