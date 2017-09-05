@@ -13,12 +13,12 @@
   <app-loader *ngIf="!comics"></app-loader>
 
   <div class="hide-on-small-only" *ngFor="let comic of comics">
-    <app-card [color]="'green darken-1'" [pathImg]="comic.thumbnail.path + '.' + comic.thumbnail.extension" [urlDetail]="'/comics/' + comic.id"
+    <app-card [color]="'green darken-1'" [pathImg]="comic.thumbnail.path + '.' + comic.thumbnail.extension" [urlDetail]="paths.COMICS + '/' + comic.id"
       [title]="comic.title"></app-card>
   </div>
 
   <ul class="collection hide-on-med-and-up">
-      <li *ngFor="let comic of comics" routerLink="{{'/comics/' + comic.id}}" class="pointer collection-item avatar green-text">
+      <li *ngFor="let comic of comics" routerLink="{{paths.COMICS + '/' + comic.id}}" class="pointer collection-item avatar green-text">
         <img src="{{comic.thumbnail.path + '.' + comic.thumbnail.extension}}" alt="" class="circle">
         <span class="title"><strong>{{comic.title}}</strong></span>
         <p class="truncate">{{comic.description}}</p>

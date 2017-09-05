@@ -18,7 +18,7 @@
                 <h3>Comics</h3>
 
                 <div class="collection">
-                    <a *ngFor="let comic of creator.comics.items" (click)="goTo('/comics', comic.resourceURI)" class="collection-item">{{comic.name}}</a>
+                    <a *ngFor="let comic of creator.comics.items" (click)="goTo(paths.COMICS, comic.resourceURI)" class="collection-item">{{comic.name}}</a>
                 </div>
             </div>
         </div>

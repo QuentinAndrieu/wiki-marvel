@@ -1,3 +1,4 @@
+import { Path } from './../../../share/path';
 import { Character } from './../../../share/models/Character';
 import { Component, OnInit } from '@angular/core';
 import { GenericResponseAPI } from '../../../share/models/GenericResponseAPI';
@@ -12,12 +13,14 @@ export class CharacterListComponent implements OnInit {
 
   characters: Character[];
   name: string;
+  paths: any;
 
   constructor(private characterService: CharacterService) { }
 
   ngOnInit() {
 
     this.name = 'Spider-Man';
+    this.paths = Path;
 
     this.characterService
       .getByNameStartWith(this.name)

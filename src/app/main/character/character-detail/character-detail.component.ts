@@ -1,3 +1,4 @@
+import { Path } from './../../../share/path';
 import { Comic } from './../../../share/models/Comic';
 import { Character } from '../../../share/models/Character';
 import { CharacterService } from '../../../share/service/character-service/character.service';
@@ -14,6 +15,7 @@ export class CharacterDetailComponent implements OnInit {
 
   character: Character;
   loading: Boolean;
+  paths: any;
 
   constructor(private characterService: CharacterService,
     private route: ActivatedRoute,
@@ -22,6 +24,8 @@ export class CharacterDetailComponent implements OnInit {
 
   ngOnInit() {
     this.setLoading(true);
+    
+    this.paths = Path;
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.characterService.getById(+params.get('id')))

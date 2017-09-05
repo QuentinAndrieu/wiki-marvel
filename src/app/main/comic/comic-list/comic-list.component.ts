@@ -1,3 +1,4 @@
+import { Path } from './../../../share/path';
 import { ComicService } from './../../../share/service/comic-service/comic.service';
 import { Comic } from './../../../share/models/Comic';
 import { Component, OnInit } from '@angular/core';
@@ -11,12 +12,14 @@ export class ComicListComponent implements OnInit {
 
   comics: Comic[];
   title: string;
+  paths: any;
 
   constructor(private comicService: ComicService) { }
 
   ngOnInit() {
 
-    this.title = 'Avengers'
+    this.title = 'Avengers',
+    this.paths = Path;
 
     this.comicService
       .getByTitleStartWith(this.title)

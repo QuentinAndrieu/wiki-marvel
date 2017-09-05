@@ -13,12 +13,12 @@
   <app-loader *ngIf="!creators"></app-loader>
 
   <div class="hide-on-small-only" *ngFor="let creator of creators">
-    <app-card [color]="'red darken-1'" [pathImg]="creator.thumbnail.path + '.' + creator.thumbnail.extension" [urlDetail]="'/creators/' + creator.id"
+    <app-card [color]="'red darken-1'" [pathImg]="creator.thumbnail.path + '.' + creator.thumbnail.extension" [urlDetail]="paths.CREATORS + '/' + creator.id"
       [title]="creator.fullName"></app-card>
   </div>
 
   <ul class="collection hide-on-med-and-up">
-    <li *ngFor="let creator of creators" routerLink="{{'/creators/' + creator.id}}" class="pointer collection-item avatar red-text">
+    <li *ngFor="let creator of creators" routerLink="{{paths.CREATORS + '/' + creator.id}}" class="pointer collection-item avatar red-text">
       <img src="{{creator.thumbnail.path + '.' + creator.thumbnail.extension}}" alt="" class="circle">
       <span class="title"><strong>{{creator.fullName}}</strong></span>
     </li>

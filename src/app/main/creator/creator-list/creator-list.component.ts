@@ -1,3 +1,4 @@
+import { Path } from './../../../share/path';
 import { CreatorService } from './../../../share/service/creator-service/creator.service';
 import { Creator } from './../../../share/models/Creator';
 import { Component, OnInit } from '@angular/core';
@@ -11,12 +12,14 @@ export class CreatorListComponent implements OnInit {
 
   creators: Creator[];
   name: string;
+  paths: any;
 
   constructor(private creatorService: CreatorService) { }
 
   ngOnInit() {
 
     this.name = 'Stan Lee';
+    this.paths = Path;
 
     this.creatorService
       .getByNameStartWith(this.name)

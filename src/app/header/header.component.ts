@@ -1,3 +1,4 @@
+import { Path } from './../share/path';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  paths: any;
+
   constructor() { }
 
   ngOnInit() {
+    this.paths = Path;
   }
 
 }

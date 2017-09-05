@@ -1,10 +1,10 @@
 <div class="row container main-section hide-on-small-only">
-  <app-card [color]="'blue-grey darken-1'" [pathImg]="'../../assets/images/character-choice.png'" [urlDetail]="'/characters'"
+  <app-card [color]="'blue-grey darken-1'" [pathImg]="'../../assets/images/character-choice.png'" [urlDetail]="paths.CHARACTERS"
     [title]="'Characters'"></app-card>
 
-  <app-card [color]="'green darken-1'" [pathImg]="'../../assets/images/comic-choice.jpg'" [urlDetail]="'/comics'" [title]="'Comics'"></app-card>
+  <app-card [color]="'green darken-1'" [pathImg]="'../../assets/images/comic-choice.jpg'" [urlDetail]="paths.COMICS" [title]="'Comics'"></app-card>
 
-  <app-card [color]="'red darken-1'" [pathImg]="'../../assets/images/creator-choice.jpg'" [urlDetail]="'/creators'" [title]="'Creators'"></app-card>
+  <app-card [color]="'red darken-1'" [pathImg]="'../../assets/images/creator-choice.jpg'" [urlDetail]="paths.CREATORS" [title]="'Creators'"></app-card>
 
 </div>
 
@@ -12,17 +12,17 @@
   <h2>Search</h2>
 
   <ul class="collection hide-on-med-and-up">
-    <li routerLink="/characters" class="pointer collection-item avatar blue-grey-text">
+    <li routerLink="{{paths.CHARACTERS}}" class="pointer collection-item avatar blue-grey-text">
       <img src="../../assets/images/character-choice.png" alt="" class="circle">
       <span class="title"><strong>Characters</strong></span>
       <p class="truncate">Search a marvel character</p>
     </li>
-    <li routerLink="/comics" class="pointer collection-item avatar green-text">
+    <li routerLink="{{paths.COMICS}}" class="pointer collection-item avatar green-text">
       <img src="../../assets/images/comic-choice.jpg" alt="" class="circle">
       <span class="title"><strong>Comics</strong></span>
       <p class="truncate">Search a marvel comic</p>
     </li>
-    <li routerLink="/creators" class="pointer collection-item avatar red-text">
+    <li routerLink="{{paths.CREATORS}}" class="pointer collection-item avatar red-text">
       <img src="../../assets/images/creator-choice.jpg" alt="" class="circle">
       <span class="title"><strong>Creators</strong></span>
       <p class="truncate">Search a marvel creator</p>

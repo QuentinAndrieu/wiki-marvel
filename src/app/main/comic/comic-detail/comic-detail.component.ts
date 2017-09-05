@@ -1,3 +1,4 @@
+import { Path } from './../../../share/path';
 import { Character } from './../../../share/models/Character';
 import { ActivatedRoute, ParamMap, Router } from '@angular/router';
 import { ComicService } from './../../../share/service/comic-service/comic.service';
@@ -14,6 +15,7 @@ export class ComicDetailComponent implements OnInit {
   comic: Comic;
   characters: Character[];
   loading: Boolean;
+  paths: any;
 
 
   constructor(private comicService: ComicService,
@@ -22,6 +24,7 @@ export class ComicDetailComponent implements OnInit {
 
   ngOnInit() {
     this.setLoading(true);
+    this.paths = Path;
 
     this.route.paramMap
       .switchMap((params: ParamMap) => this.comicService.getById(+params.get('id')))
