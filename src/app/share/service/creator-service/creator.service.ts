@@ -27,11 +27,13 @@ export class CreatorService {
     return creator;
   }
 
-  getByNameStartWith(name: String): Observable<CreatorListResponseAPI> {
+  getByNameStartWith(name: string): Observable<CreatorListResponseAPI> {
 
     const creators = this.http
       .get(`${this.baseUrl}/creators?nameStartsWith=${name}&apikey=${this.apikey}&ts=${this.ts}&hash=${this.hash}`)
       .map(res => res.json());
+
+      localStorage.setItem('creator', name);
 
     return creators;
   }

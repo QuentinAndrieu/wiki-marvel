@@ -30,12 +30,13 @@ export class CharacterService {
     return character;
   }
 
-  getByNameStartWith(name: String): Observable<CharacterListResponseAPI> {
+  getByNameStartWith(name: string): Observable<CharacterListResponseAPI> {
 
     const characters = this.http
       .get(`${this.baseUrl}/characters?nameStartsWith=${name}&apikey=${this.apikey}&ts=${this.ts}&hash=${this.hash}`)
       .map(res => res.json());
 
+      localStorage.setItem('character', name);
 
     return characters || null;
   }

@@ -18,7 +18,7 @@ export class ComicListComponent implements OnInit {
 
   ngOnInit() {
 
-    this.title = 'Avengers',
+    this.title = localStorage.getItem('comic') || 'Avengers',
     this.paths = Path;
 
     this.comicService

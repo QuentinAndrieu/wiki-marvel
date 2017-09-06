@@ -5,6 +5,17 @@
 
 body {
     color: black;
+    font-family: Marvel;
+    letter-spacing: 2px;
+}
+
+p, a, input {
+    font-size: 25px;
+}
+
+p, a, input {
+    font-size: 27px!important;
+    letter-spacing: 2px!important;
 }
 
 .collapsible-body {
@@ -21,20 +32,19 @@ body {
 }
 
 .collection a.collection-item {
-    color: black!important;
     font-weight: bold;
 }
 
-.title-comic {
-    color: #43a047 ;
+.color-comic {
+    color: #43a047!important;
 }
 
-.title-character {
-    color: #455a64;
+.color-character {
+    color: #455a64!important;
 }
 
-.title-creator {
-    color: #e53935;
+.color-creator {
+    color: #e53935!important;
 }
 
 .main-section {
@@ -62,4 +72,7 @@ img[hidden] {
     margin-top: 86px;
 }
 
-
+@font-face {
+    font-family: 'Marvel';
+    src: url('assets/fonts/marvel.ttf');
+}

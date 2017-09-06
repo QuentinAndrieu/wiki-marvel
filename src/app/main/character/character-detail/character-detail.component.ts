@@ -24,7 +24,6 @@ export class CharacterDetailComponent implements OnInit {
 
   ngOnInit() {
     this.setLoading(true);
-    
     this.paths = Path;
 
     this.route.paramMap

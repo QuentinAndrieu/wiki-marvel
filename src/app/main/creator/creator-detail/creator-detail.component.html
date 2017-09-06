@@ -1,7 +1,7 @@
 <div class="row container main-section">
     <app-loader *ngIf="!creator"></app-loader>
     <div *ngIf="creator">
-        <h2 class="title-creator center">
+        <h2 class="color-creator center">
             {{creator.fullName}}</h2>
         <div class="col s12 m12 l6 xl6">
             <div class="col s12">
@@ -18,7 +18,7 @@
                 <h3>Comics</h3>
 
                 <div class="collection">
-                    <a *ngFor="let comic of creator.comics.items" (click)="goTo(paths.COMICS, comic.resourceURI)" class="collection-item">{{comic.name}}</a>
+                    <a *ngFor="let comic of creator.comics.items" (click)="goTo(paths.COMICS, comic.resourceURI)" class="collection-item color-creator">{{comic.name}}</a>
                 </div>
             </div>
         </div>

@@ -1,10 +1,10 @@
 <div class="row container main-section">
-  <h2 class="title-character">Characters</h2>
+  <h2 class="color-character">Characters</h2>
 
   <form class="col s12">
     <div class="row">
       <div class="input-field col s12">
-        <input placeholder="Search" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" (ngModelChange)="updateSearch(name)"
+        <input type="text" placeholder="Search" [(ngModel)]="name" [ngModelOptions]="{standalone: true}" (ngModelChange)="updateSearch(name)"
           id="search" class="validate">
       </div>
     </div>
@@ -18,7 +18,7 @@
   </div>
 
   <ul class="collection hide-on-med-and-up">
-    <li *ngFor="let character of characters" routerLink="{{paths.CHARACTERS}} + '/' + character.id" class="pointer collection-item avatar blue-grey-text">
+    <li *ngFor="let character of characters" routerLink="paths.CHARACTERS + '/' + character.id" class="pointer collection-item avatar blue-grey-text">
       <img src="{{character.thumbnail.path + '.' + character.thumbnail.extension}}" alt="" class="circle">
       <span class="title"><strong>{{character.name}}</strong></span>
       <p class="truncate">{{character.description}}</p>

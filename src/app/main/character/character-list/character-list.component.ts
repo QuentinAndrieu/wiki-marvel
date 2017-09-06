@@ -19,7 +19,7 @@ export class CharacterListComponent implements OnInit {
 
   ngOnInit() {
 
-    this.name = 'Spider-Man';
+    this.name = localStorage.getItem('character') || 'Spider-Man';
     this.paths = Path;
 
     this.characterService
@@ -31,6 +31,7 @@ export class CharacterListComponent implements OnInit {
 
   updateSearch(name: string) {
     if (name) {
+
       this.characterService
         .getByNameStartWith(name)
         .subscribe(res => {

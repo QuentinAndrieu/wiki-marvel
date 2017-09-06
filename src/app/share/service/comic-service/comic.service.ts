@@ -27,11 +27,13 @@ export class ComicService {
     return comic;
   }
 
-  getByTitleStartWith(title: String): Observable<ComicListResponseAPI> {
+  getByTitleStartWith(title: string): Observable<ComicListResponseAPI> {
 
     const comics = this.http
       .get(`${this.baseUrl}/comics?titleStartsWith=${title}&apikey=${this.apikey}&ts=${this.ts}&hash=${this.hash}`)
       .map(res => res.json());
+
+      localStorage.setItem('comic', title);
 
     return comics;
   }

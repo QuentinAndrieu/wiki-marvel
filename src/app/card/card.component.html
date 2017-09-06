@@ -1,15 +1,12 @@
 <div class="col s12 m12 l12 xl9">
-  <div class="card horizontal white-text" [ngClass]="color">
+  <div (click)="goTo(urlDetail)" class="card horizontal white-text pointer" [ngClass]="color">
     <div class="card-image">
       <app-loader *ngIf="loading"></app-loader>
-      <img [hidden]="loading" (load)="setLoading(false)" (click)="goTo(urlDetail)" class="pointer" src="{{pathImg}}">
+      <img [hidden]="loading" (load)="setLoading(false)" src="{{pathImg}}">
     </div>
     <div class="card-stacked">
       <div class="card-content">
         <h3>{{title}}</h3>
-      </div>
-      <div class="card-action">
-        <a class="pointer" (click)="goTo(urlDetail)">DETAIL</a>
       </div>
     </div>
   </div>

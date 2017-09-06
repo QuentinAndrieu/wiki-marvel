@@ -18,7 +18,7 @@ export class CreatorListComponent implements OnInit {
 
   ngOnInit() {
 
-    this.name = 'Stan Lee';
+    this.name = localStorage.getItem('creator') || 'Stan Lee';
     this.paths = Path;
 
     this.creatorService

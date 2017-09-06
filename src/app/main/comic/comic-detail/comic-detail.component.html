@@ -1,7 +1,7 @@
 <div class="row container main-section">
   <app-loader *ngIf="!comic"></app-loader>
   <div *ngIf="comic">
-    <h2 class="title-comic center">
+    <h2 class="color-comic center">
       {{comic.title}}</h2>
     <div class="col s12 m12 l6 xl6">
       <div class="col s12">
@@ -24,7 +24,7 @@
         <h3>Characters</h3>
 
         <div class="collection">
-          <a *ngFor="let character of comic.characters.items" (click)="goTo(paths.CHARACTERS, character.resourceURI)" class="collection-item">{{character.name}}</a>
+          <a *ngFor="let character of comic.characters.items" (click)="goTo(paths.CHARACTERS, character.resourceURI)" class="collection-item color-comic">{{character.name}}</a>
         </div>
       </div>
     </div>
