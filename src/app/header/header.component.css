@@ -2,7 +2,12 @@
     height: 64px;
 }
 
-
 nav ul a {
     font-size: 24px;
+}
+
+nav {
+    font-size: 25px;
+    font-family: Marvel;
+    letter-spacing: 2px;
 }
