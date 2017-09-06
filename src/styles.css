@@ -13,10 +13,17 @@ p, a, input {
     font-size: 25px;
 }
 
-p, a, input {
+p, a {
+    font-size: 27px;
+    letter-spacing: 2px;
+}
+
+input {
     font-size: 27px!important;
     letter-spacing: 2px!important;
 }
+
+
 
 .collapsible-body {
     background-color: white;

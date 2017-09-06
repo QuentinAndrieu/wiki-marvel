@@ -18,13 +18,16 @@
 
 @media only screen and (max-width: 500px) {
     .info {
-        height: 140px;
+        height: 160px;
         padding: 25px;
     }
     
     .info-text-container {
-        font-size: 15px;
         padding: 5px;
         font-weight: 300%;
+    }
+
+    .info-text-container p {
+        font-size: 20px!important;
     }
 }

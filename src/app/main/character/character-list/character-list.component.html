@@ -18,7 +18,7 @@
   </div>
 
   <ul class="collection hide-on-med-and-up">
-    <li *ngFor="let character of characters" routerLink="paths.CHARACTERS + '/' + character.id" class="pointer collection-item avatar blue-grey-text">
+    <li *ngFor="let character of characters" routerLink="{{paths.CHARACTERS + '/' + character.id}}" class="pointer collection-item avatar blue-grey-text">
       <img src="{{character.thumbnail.path + '.' + character.thumbnail.extension}}" alt="" class="circle">
       <span class="title"><strong>{{character.name}}</strong></span>
       <p class="truncate">{{character.description}}</p>
