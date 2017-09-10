@@ -1,5 +1,5 @@
 <div class="col s12 m12 l12 xl9">
-  <div (click)="goTo(urlDetail)" class="card horizontal white-text pointer" [ngClass]="color">
+  <div (click)="goTo(urlDetail)" class="card horizontal white-text pointer z-depth-5" [ngClass]="color">
     <div class="card-image">
       <app-loader *ngIf="loading"></app-loader>
       <img [hidden]="loading" (load)="setLoading(false)" src="{{pathImg}}">
