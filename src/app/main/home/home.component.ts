@@ -1,3 +1,4 @@
+import { Path } from './../../share/path';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
@@ -8,9 +9,12 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+  paths = Path;
+
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.paths = Path;
   }
 
   goTo(path: string) {

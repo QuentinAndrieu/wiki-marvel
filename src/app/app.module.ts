@@ -18,7 +18,6 @@ import { ComicDetailComponent } from './main/comic/comic-detail/comic-detail.com
 import { ComicListComponent } from './main/comic/comic-list/comic-list.component';
 import { LoaderComponent } from './loader/loader.component';
 import { HomeComponent } from './main/home/home.component';
-import { SearchComponent } from './main/search/search.component';
 import { CreatorListComponent } from './main/creator/creator-list/creator-list.component';
 import { CreatorDetailComponent } from './main/creator/creator-detail/creator-detail.component';
 import { CardComponent } from './card/card.component';
@@ -35,7 +34,6 @@ import { CardComponent } from './card/card.component';
     ComicListComponent,
     LoaderComponent,
     HomeComponent,
-    SearchComponent,
     CreatorListComponent,
     CreatorDetailComponent,
     CardComponent
@@ -49,9 +47,6 @@ import { CardComponent } from './card/card.component';
       {
         path: '',
         component: HomeComponent
-      }, {
-        path: 'search',
-        component: SearchComponent
       }, {
         path: 'characters',
         component: CharacterListComponent
