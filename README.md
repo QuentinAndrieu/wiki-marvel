@@ -14,14 +14,12 @@ Run 'npm install'
 
 #### Run project
 
-Run `ng serve` for a dev server. 
+Run `npm run dev` for a dev server. 
 
 Navigate to `http://localhost:4200/`.
 
-#### Deploy project on Herok
+#### Deploy project on Heroku
 
-Create account on Heroku 
+Set env variable BASEURL, PRIVATE_KEY et PUBLIC_KEY on heroku
 
-Set env variable BASEURL, PRIVATE_KEY et PUBLIC_KEY in heroku
-
-Push on heroku 
+Run 'npm run deploy' to push your project on git and deploy on heroku
