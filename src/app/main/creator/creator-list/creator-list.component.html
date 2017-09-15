@@ -18,7 +18,7 @@
   </div>
 
   <ul class="collection hide-on-med-and-up">
-    <li *ngFor="let creator of creators" routerLink="{{paths.CREATORS + '/' + creator.id}}" class="pointer collection-item avatar red-text">
+    <li *ngFor="let creator of creators" routerLink="{{paths.CREATORS + '/' + creator.id}}" class="pointer collection-item avatar indigo-text">
       <img src="{{creator.thumbnail.path + '.' + creator.thumbnail.extension}}" alt="" class="circle">
       <span class="title"><strong>{{creator.fullName}}</strong></span>
     </li>
