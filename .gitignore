@@ -47,3 +47,9 @@ src/app/share/config.ts
 
 # npmrc
 .npmrc
+
+#firebase
+.firebaserc
+firebase.json
+public/
+storage.rules
